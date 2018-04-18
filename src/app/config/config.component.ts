@@ -1,7 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Config, ConfigService} from '../REST/config/config.service';
-
-import {LogService} from '../logging/log.service';
+import { Component, OnInit } from '@angular/core';
+import { Config, ConfigService } from '../REST/config/config.service';
 
 @Component({
   selector: 'app-config',
@@ -13,7 +11,7 @@ export class ConfigComponent implements OnInit {
   config: Config;
   headers: string[];
 
-  constructor(private configService: ConfigService, private logger: LogService) {
+  constructor(private configService: ConfigService) {
     this.showConfig();
   }
 
@@ -28,7 +26,7 @@ export class ConfigComponent implements OnInit {
 
   showConfigResponse() {
     this.configService.getConfigResponse()
-    // resp is of type `HttpResponse<Config>`
+      // resp is of type `HttpResponse<Config>`
       .subscribe(resp => {
         // display its headers
         const keys = resp.headers.keys();
@@ -36,16 +34,12 @@ export class ConfigComponent implements OnInit {
           `${key}: ${resp.headers.get(key)}`);
 
         // access the body directly, which is typed as `Config`.
-        this.config = {...resp.body};
+        this.config = { ...resp.body };
       });
   }
 
   showConfig() {
     this.configService.getConfig()
-      .subscribe(data => this.config = {...data});
-  }
-
-  testLog() {
-    this.logger.log('test');
+      .subscribe(data => this.config = { ...data });
   }
 }
