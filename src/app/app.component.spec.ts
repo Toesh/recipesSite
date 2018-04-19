@@ -1,10 +1,23 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed, async } from '@angular/core/testing';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { ConfigService } from './REST/config/config.service';
 import { AppComponent } from './app.component';
+import { ConfigComponent } from './config/config.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        ConfigComponent
+      ],
+      imports: [
+        HttpClientModule,
+        LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR })
+      ],
+      providers: [
+        ConfigService
       ],
     }).compileComponents();
   }));

@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
@@ -7,7 +7,6 @@ import { catchError, retry } from 'rxjs/operators';
 
 export interface Config {
   recipeUrl: string;
-  test: string;
 }
 
 @Injectable()
@@ -31,6 +30,7 @@ export class ConfigService {
   }
 
   private handleError(error: HttpErrorResponse) {
+    console.log(error);
     if (error.error instanceof ErrorEvent) {
       // Handle client-side or network error.
       this.logger.error('An error occurred:', error.error.message);

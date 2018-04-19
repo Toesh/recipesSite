@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Config, ConfigService } from '../REST/config/config.service';
 
+
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -12,7 +13,6 @@ export class ConfigComponent implements OnInit {
   headers: string[];
 
   constructor(private configService: ConfigService) {
-    this.showConfig();
   }
 
   ngOnInit() {
