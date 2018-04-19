@@ -8,10 +8,10 @@ import { Config, ConfigService } from '../config/config.service';
 
 @Injectable()
 export class RecipeService {
-  recipeUrl;
+  recipeUrl = 'assets/recipe.json';
 
   constructor(private http: HttpClient, private configService: ConfigService, private logger: NGXLogger) {
-    this.recipeUrl = configService.getConfig();
+    // this.recipeUrl = configService.getConfig(); //TODO: Get url from settings
   }
 
   getRecipe() {

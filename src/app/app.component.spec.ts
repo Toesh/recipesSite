@@ -3,7 +3,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { ConfigService } from './REST/config/config.service';
 import { AppComponent } from './app.component';
-import { ConfigComponent } from './config/config.component';
+import { ConfigComponent } from './components/config/config.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
       ],
       imports: [
         HttpClientModule,
-        LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR })
+        LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR }),
+        RouterTestingModule
       ],
       providers: [
         ConfigService

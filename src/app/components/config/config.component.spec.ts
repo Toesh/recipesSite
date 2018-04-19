@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfigComponent } from './config.component';
-import { Config, ConfigService } from '../REST/config/config.service';
+import { Config, ConfigService } from '../../REST/config/config.service';
 
 import { HttpClient, HttpHandler} from '@angular/common/http';
 import { NGXLogger, NGXLoggerHttpService, LoggerConfig } from 'ngx-logger';
