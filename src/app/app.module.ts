@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
+import { CollapseModule, AccordionModule } from 'ngx-bootstrap';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { AppRoutingModule } from './/app-routing.module';
 import { ConfigService } from './REST/config/config.service';
@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR }),
     AppRoutingModule,
-    CollapseModule.forRoot(), BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(), AccordionModule.forRoot(),
     FormsModule
   ],
   providers: [
