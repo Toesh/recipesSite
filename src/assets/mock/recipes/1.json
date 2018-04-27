@@ -1,0 +1,126 @@
+{
+  "name": "Goulash",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam a magna nec semper. Aliquam rhoncus nibh ut ipsum consequat consequat. Suspendisse fermentum elit arcu, nec rutrum mi pulvinar ac. Cras id mi id leo ultricies eleifend ac vel lectus. Fusce tristique neque ut mollis pulvinar. Suspendisse venenatis et nisi vel rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi aliquet vestibulum faucibus. Mauris eu bibendum lorem, in consequat massa. Nunc quis consequat velit. Mauris placerat tortor in diam luctus vulputate. Donec volutpat mattis massa sed vulputate.",
+  "ingredients": [
+    {
+      "spices": [
+        {
+          "name": "Zout",
+          "quantity": "",
+          "unit": "",
+          "note": "naar smaak"
+        },
+        {
+          "name": "Peper",
+          "quantity": "",
+          "unit": "",
+          "note": "naar smaak"
+        },
+        {
+          "name": "Paprikapoeder",
+          "quantity": "1",
+          "unit": "el",
+          "note": ""
+        },
+        {
+          "name": "Komijn",
+          "quantity": "1",
+          "unit": "mespunt",
+          "note": ""
+        },
+        {
+          "name": "Marjolein",
+          "quantity": "1",
+          "unit": "mespunt",
+          "note": ""
+        },
+        {
+          "name": "Laurierblad",
+          "quantity": "1",
+          "unit": "unit",
+          "note": ""
+        }
+      ],
+      "meat": [
+        {
+          "name": "Riblappen",
+          "quantity": "500",
+          "unit": "g",
+          "note": "in blokjes"
+        }
+      ],
+      "vegetanles": [
+        {
+          "name": "Uien",
+          "quantity": "3",
+          "unit": "unit",
+          "note": "gesnipperd"
+        },
+        {
+          "name": "Tomaten",
+          "quantity": "500",
+          "unit": "g",
+          "note": "ontveld en in vieren"
+        },
+        {
+          "name": "Tomatenpuree",
+          "quantity": "1",
+          "unit": "el",
+          "note": ""
+        }
+      ],
+      "other": [
+        {
+          "name": "Reuzel",
+          "quantity": "50",
+          "unit": "g",
+          "note": "in kleine stukjes"
+        },
+        {
+          "name": "Boter",
+          "quantity": "25",
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "name": "Azijn",
+          "quantity": "1",
+          "unit": "el",
+          "note": ""
+        },
+        {
+          "name": "Bulgaarse yoghurt",
+          "quantity": "125",
+          "unit": "ml",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "preparation": [
+    {
+      "step": 1,
+      "time": "10",
+      "unit": "min",
+      "description": "Bestrooi het vlees met zout, peper en paprikapoeder en laat dit 10 minuten intrekken."
+    },
+    {
+      "step": 2,
+      "time": "5-10",
+      "unit": "min",
+      "description": "Smelt de ruzel met de boter in een pan en verhit deze tot er damp afkomt. Bak hierin de uien en voeg het vlees toe. Bak het vlees onder af en toe omscheppen rondom bruin en temper het vuur."
+    },
+    {
+      "step": 3,
+      "time": "1.5",
+      "unit": "uur",
+      "description": "Roer het paprikapoeder door het vlees, laat het even meebakken en voeg tomaten, tomatenpuree, azijn, komijn, marjolein en laurierblad toe. Roer het geheel door elkaar, sluit de pan en stoof de goulash in 1.50 uur zachtjes gaar."
+    },
+    {
+      "step": 4,
+      "time": "5",
+      "unit": "min",
+      "description": "Verwijder het laurierblak en roer de bulgaarse yoghurt door de goulash. Breng deze eventueel op smaak met zout en peper en geef er droge rijst bij."
+    }
+  ]
+}

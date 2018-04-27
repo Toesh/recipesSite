@@ -2,11 +2,12 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "baseUrl": "./",
-    "module": "es2015",
-    "paths" : {
-      "@assets/*" : ["src/assets/*"]
+    "baseUrl": ".",
+    "paths": {
+      "@rest/*" : ["app/REST/*"],
+      "@assets/*" : ["assets/*"]
     },
+    "module": "es2015",
     "types": []
   },
   "exclude": [
