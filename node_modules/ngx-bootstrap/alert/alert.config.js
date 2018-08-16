@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var AlertConfig = (function () {
+var AlertConfig = /** @class */ (function () {
     function AlertConfig() {
         /** default alert type */
         this.type = 'warning';
@@ -11,8 +11,6 @@ var AlertConfig = (function () {
     AlertConfig.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    AlertConfig.ctorParameters = function () { return []; };
     return AlertConfig;
 }());
 export { AlertConfig };

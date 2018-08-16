@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SortableComponent } from './sortable.component';
 import { DraggableItemService } from './draggable-item.service';
-var SortableModule = (function () {
+var SortableModule = /** @class */ (function () {
     function SortableModule() {
     }
     SortableModule.forRoot = function () {
@@ -15,8 +15,6 @@ var SortableModule = (function () {
                     exports: [SortableComponent]
                 },] },
     ];
-    /** @nocollapse */
-    SortableModule.ctorParameters = function () { return []; };
     return SortableModule;
 }());
 export { SortableModule };

@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-var BsDropdownState = (function () {
+var BsDropdownState = /** @class */ (function () {
     function BsDropdownState() {
         var _this = this;
         this.direction = 'down';

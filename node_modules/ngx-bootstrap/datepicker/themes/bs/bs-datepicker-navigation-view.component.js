@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { BsNavigationDirection } from '../../models/index';
-var BsDatepickerNavigationViewComponent = (function () {
+var BsDatepickerNavigationViewComponent = /** @class */ (function () {
     function BsDatepickerNavigationViewComponent() {
         this.onNavigate = new EventEmitter();
         this.onViewMode = new EventEmitter();
@@ -19,11 +19,10 @@ var BsDatepickerNavigationViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsDatepickerNavigationViewComponent.ctorParameters = function () { return []; };
     BsDatepickerNavigationViewComponent.propDecorators = {
-        'calendar': [{ type: Input },],
-        'onNavigate': [{ type: Output },],
-        'onViewMode': [{ type: Output },],
+        "calendar": [{ type: Input },],
+        "onNavigate": [{ type: Output },],
+        "onViewMode": [{ type: Output },],
     };
     return BsDatepickerNavigationViewComponent;
 }());

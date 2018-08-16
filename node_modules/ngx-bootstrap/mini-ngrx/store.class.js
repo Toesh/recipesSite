@@ -8,13 +8,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-/**
- * @copyright ngrx
- */
-import { Observable } from 'rxjs/Observable';
-import { distinctUntilChanged } from 'rxjs/operator/distinctUntilChanged';
-import { map } from 'rxjs/operator/map';
-var MiniStore = (function (_super) {
+import { Observable } from 'rxjs';
+import { distinctUntilChanged, map } from 'rxjs/operators';
+var MiniStore = /** @class */ (function (_super) {
     __extends(MiniStore, _super);
     function MiniStore(_dispatcher, _reducer, state$) {
         var _this = _super.call(this) || this;
@@ -24,8 +20,8 @@ var MiniStore = (function (_super) {
         return _this;
     }
     MiniStore.prototype.select = function (pathOrMapFn) {
-        var mapped$ = map.call(this, pathOrMapFn);
-        return distinctUntilChanged.call(mapped$);
+        var mapped$ = this.source.pipe(map(pathOrMapFn));
+        return mapped$.pipe(distinctUntilChanged());
     };
     MiniStore.prototype.lift = function (operator) {
         var store = new MiniStore(this._dispatcher, this._reducer, this);

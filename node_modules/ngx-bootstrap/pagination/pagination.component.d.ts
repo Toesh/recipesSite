@@ -29,7 +29,7 @@ export declare class PaginationComponent implements ControlValueAccessor, OnInit
     lastText: string;
     /** if true current page will in the middle of pages list */
     rotate: boolean;
-    /** add class to <li> */
+    /** add class to <code><li\></code>*/
     pageBtnClass: string;
     /** if true pagination component will be disabled */
     disabled: boolean;

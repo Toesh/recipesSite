@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BsNavigationDirection } from '../../models/index';
-var BsMonthCalendarViewComponent = (function () {
+var BsMonthCalendarViewComponent = /** @class */ (function () {
     function BsMonthCalendarViewComponent() {
         this.onNavigate = new EventEmitter();
         this.onViewMode = new EventEmitter();
@@ -27,13 +27,12 @@ var BsMonthCalendarViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsMonthCalendarViewComponent.ctorParameters = function () { return []; };
     BsMonthCalendarViewComponent.propDecorators = {
-        'calendar': [{ type: Input },],
-        'onNavigate': [{ type: Output },],
-        'onViewMode': [{ type: Output },],
-        'onSelect': [{ type: Output },],
-        'onHover': [{ type: Output },],
+        "calendar": [{ type: Input },],
+        "onNavigate": [{ type: Output },],
+        "onViewMode": [{ type: Output },],
+        "onSelect": [{ type: Output },],
+        "onHover": [{ type: Output },],
     };
     return BsMonthCalendarViewComponent;
 }());

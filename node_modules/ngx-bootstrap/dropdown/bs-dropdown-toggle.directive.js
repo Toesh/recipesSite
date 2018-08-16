@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
 import { BsDropdownState } from './bs-dropdown.state';
-var BsDropdownToggleDirective = (function () {
+var BsDropdownToggleDirective = /** @class */ (function () {
     function BsDropdownToggleDirective(_state, _element) {
         var _this = this;
         this._state = _state;
@@ -51,11 +51,11 @@ var BsDropdownToggleDirective = (function () {
         { type: ElementRef, },
     ]; };
     BsDropdownToggleDirective.propDecorators = {
-        'isDisabled': [{ type: HostBinding, args: ['attr.disabled',] },],
-        'isOpen': [{ type: HostBinding, args: ['attr.aria-expanded',] },],
-        'onClick': [{ type: HostListener, args: ['click', [],] },],
-        'onDocumentClick': [{ type: HostListener, args: ['document:click', ['$event'],] },],
-        'onEsc': [{ type: HostListener, args: ['keyup.esc',] },],
+        "isDisabled": [{ type: HostBinding, args: ['attr.disabled',] },],
+        "isOpen": [{ type: HostBinding, args: ['attr.aria-expanded',] },],
+        "onClick": [{ type: HostListener, args: ['click', [],] },],
+        "onDocumentClick": [{ type: HostListener, args: ['document:click', ['$event'],] },],
+        "onEsc": [{ type: HostListener, args: ['keyup.esc',] },],
     };
     return BsDropdownToggleDirective;
 }());

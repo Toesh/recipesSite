@@ -2,7 +2,7 @@ import { Component, HostBinding, Input, Renderer2 } from '@angular/core';
 import { TabsetConfig } from './tabset.config';
 // todo: add active event to tab
 // todo: fix? mixing static and dynamic tabs position tabs in order of creation
-var TabsetComponent = (function () {
+var TabsetComponent = /** @class */ (function () {
     function TabsetComponent(config, renderer) {
         this.renderer = renderer;
         this.clazz = true;
@@ -11,8 +11,8 @@ var TabsetComponent = (function () {
         Object.assign(this, config);
     }
     Object.defineProperty(TabsetComponent.prototype, "vertical", {
-        /** if true tabs will be placed vertically */
-        get: function () {
+        get: /** if true tabs will be placed vertically */
+        function () {
             return this._vertical;
         },
         set: function (value) {
@@ -23,8 +23,8 @@ var TabsetComponent = (function () {
         configurable: true
     });
     Object.defineProperty(TabsetComponent.prototype, "justified", {
-        /** if true tabs fill the container and have a consistent width */
-        get: function () {
+        get: /** if true tabs fill the container and have a consistent width */
+        function () {
             return this._justified;
         },
         set: function (value) {
@@ -35,8 +35,8 @@ var TabsetComponent = (function () {
         configurable: true
     });
     Object.defineProperty(TabsetComponent.prototype, "type", {
-        /** navigation context class: 'tabs' or 'pills' */
-        get: function () {
+        get: /** navigation context class: 'tabs' or 'pills' */
+        function () {
             return this._type;
         },
         set: function (value) {
@@ -123,10 +123,10 @@ var TabsetComponent = (function () {
         { type: Renderer2, },
     ]; };
     TabsetComponent.propDecorators = {
-        'vertical': [{ type: Input },],
-        'justified': [{ type: Input },],
-        'type': [{ type: Input },],
-        'clazz': [{ type: HostBinding, args: ['class.tab-container',] },],
+        "vertical": [{ type: Input },],
+        "justified": [{ type: Input },],
+        "type": [{ type: Input },],
+        "clazz": [{ type: HostBinding, args: ['class.tab-container',] },],
     };
     return TabsetComponent;
 }());

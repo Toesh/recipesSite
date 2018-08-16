@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { yearsPerCalendar } from '../../engine/format-years-calendar';
 import { BsNavigationDirection } from '../../models/index';
-var BsYearsCalendarViewComponent = (function () {
+var BsYearsCalendarViewComponent = /** @class */ (function () {
     function BsYearsCalendarViewComponent() {
         this.onNavigate = new EventEmitter();
         this.onViewMode = new EventEmitter();
@@ -28,13 +28,12 @@ var BsYearsCalendarViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsYearsCalendarViewComponent.ctorParameters = function () { return []; };
     BsYearsCalendarViewComponent.propDecorators = {
-        'calendar': [{ type: Input },],
-        'onNavigate': [{ type: Output },],
-        'onViewMode': [{ type: Output },],
-        'onSelect': [{ type: Output },],
-        'onHover': [{ type: Output },],
+        "calendar": [{ type: Input },],
+        "onNavigate": [{ type: Output },],
+        "onViewMode": [{ type: Output },],
+        "onSelect": [{ type: Output },],
+        "onHover": [{ type: Output },],
     };
     return BsYearsCalendarViewComponent;
 }());

@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-var BsModalRef = (function () {
+var BsModalRef = /** @class */ (function () {
     function BsModalRef() {
         /**
-         * Hides the modal
-         */
+           * Hides the modal
+           */
         this.hide = Function;
     }
     BsModalRef.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    BsModalRef.ctorParameters = function () { return []; };
     return BsModalRef;
 }());
 export { BsModalRef };

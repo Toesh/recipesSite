@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BsNavigationDirection } from '../../models/index';
-var BsDaysCalendarViewComponent = (function () {
+var BsDaysCalendarViewComponent = /** @class */ (function () {
     function BsDaysCalendarViewComponent() {
         this.onNavigate = new EventEmitter();
         this.onViewMode = new EventEmitter();
@@ -28,14 +28,13 @@ var BsDaysCalendarViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsDaysCalendarViewComponent.ctorParameters = function () { return []; };
     BsDaysCalendarViewComponent.propDecorators = {
-        'calendar': [{ type: Input },],
-        'options': [{ type: Input },],
-        'onNavigate': [{ type: Output },],
-        'onViewMode': [{ type: Output },],
-        'onSelect': [{ type: Output },],
-        'onHover': [{ type: Output },],
+        "calendar": [{ type: Input },],
+        "options": [{ type: Input },],
+        "onNavigate": [{ type: Output },],
+        "onViewMode": [{ type: Output },],
+        "onSelect": [{ type: Output },],
+        "onHover": [{ type: Output },],
     };
     return BsDaysCalendarViewComponent;
 }());

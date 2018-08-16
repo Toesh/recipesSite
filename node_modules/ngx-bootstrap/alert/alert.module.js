@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AlertComponent } from './alert.component';
 import { AlertConfig } from './alert.config';
-var AlertModule = (function () {
+var AlertModule = /** @class */ (function () {
     function AlertModule() {
     }
     AlertModule.forRoot = function () {
@@ -16,8 +16,6 @@ var AlertModule = (function () {
                     entryComponents: [AlertComponent]
                 },] },
     ];
-    /** @nocollapse */
-    AlertModule.ctorParameters = function () { return []; };
     return AlertModule;
 }());
 export { AlertModule };

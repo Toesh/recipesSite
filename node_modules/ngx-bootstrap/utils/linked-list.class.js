@@ -1,8 +1,7 @@
-var LinkedList = (function () {
+var LinkedList = /** @class */ (function () {
     function LinkedList() {
         this.length = 0;
         this.asArray = [];
-        // Array methods overriding END
     }
     LinkedList.prototype.get = function (position) {
         if (this.length === 0 || position < 0 || position >= this.length) {
@@ -109,7 +108,10 @@ var LinkedList = (function () {
         return result;
     };
     // Array methods overriding start
-    LinkedList.prototype.push = function () {
+    // Array methods overriding start
+    LinkedList.prototype.push = 
+    // Array methods overriding start
+    function () {
         var _this = this;
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {

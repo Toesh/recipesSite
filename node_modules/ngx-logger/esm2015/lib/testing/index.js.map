@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/testing/index.ts"
+  ],
+  "sourcesContent": [
+    "export * from './logger.service.mock';\nexport * from './custom-logger.service.mock';\nexport * from './http.service.mock';\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,8BAAc,uBAAuB,CAAC;AACtC,2CAAc,8BAA8B,CAAC;AAC7C,yCAAc,qBAAqB,CAAC"
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var DatepickerConfig = (function () {
+var DatepickerConfig = /** @class */ (function () {
     function DatepickerConfig() {
         this.locale = 'en';
         this.datepickerMode = 'day';
@@ -22,8 +22,6 @@ var DatepickerConfig = (function () {
     DatepickerConfig.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    DatepickerConfig.ctorParameters = function () { return []; };
     return DatepickerConfig;
 }());
 export { DatepickerConfig };

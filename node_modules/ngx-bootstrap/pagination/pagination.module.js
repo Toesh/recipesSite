@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { PaginationConfig } from './pagination.config';
 import { PagerComponent } from './pager.component';
 import { PaginationComponent } from './pagination.component';
-var PaginationModule = (function () {
+var PaginationModule = /** @class */ (function () {
     function PaginationModule() {
     }
     PaginationModule.forRoot = function () {
@@ -16,8 +16,6 @@ var PaginationModule = (function () {
                     exports: [PagerComponent, PaginationComponent]
                 },] },
     ];
-    /** @nocollapse */
-    PaginationModule.ctorParameters = function () { return []; };
     return PaginationModule;
 }());
 export { PaginationModule };

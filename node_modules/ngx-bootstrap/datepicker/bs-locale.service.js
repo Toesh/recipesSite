@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-var BsLocaleService = (function () {
+import { BehaviorSubject } from 'rxjs';
+var BsLocaleService = /** @class */ (function () {
     function BsLocaleService() {
         this._defaultLocale = 'en';
         this._locale = new BehaviorSubject(this._defaultLocale);
@@ -36,8 +36,6 @@ var BsLocaleService = (function () {
     BsLocaleService.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    BsLocaleService.ctorParameters = function () { return []; };
     return BsLocaleService;
 }());
 export { BsLocaleService };

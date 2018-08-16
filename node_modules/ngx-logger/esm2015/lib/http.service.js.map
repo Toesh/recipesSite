@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "http.service.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/http.service.ts"
+  ],
+  "sourcesContent": [
+    "import {Injectable} from '@angular/core';\nimport {HttpClient, HttpHeaders} from '@angular/common/http';\nimport {Observable} from 'rxjs';\nimport {HttpMetaDataInterface} from './types/http-meta-data.interface';\n\n\n@Injectable()\nexport class NGXLoggerHttpService {\n  constructor(private readonly http: HttpClient) {\n\n  }\n\n  logOnServer(url: string, message: string, additional: any[], metaData: HttpMetaDataInterface): Observable<any> {\n    const body = {\n      message: message,\n      additional: additional,\n      level: metaData.level,\n      timestamp: metaData.timestamp,\n      fileName: metaData.fileName,\n      lineNumber: metaData.lineNumber\n    };\n\n    const options = {\n      headers: new HttpHeaders().set('Content-Type', 'application/json')\n    };\n\n    return this.http.post(url, body, options)\n  }\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,OAAO,EAAC,UAAU,EAAC,MAAM,eAAe,CAAC;AACzC,OAAO,EAAC,UAAU,EAAE,WAAW,EAAC,MAAM,sBAAsB,CAAC;AAM7D,MAAM;;;;IACJ,YAA6B,IAAgB;QAAhB,SAAI,GAAJ,IAAI,CAAY;KAE5C;;;;;;;;IAED,WAAW,CAAC,GAAW,EAAE,OAAe,EAAE,UAAiB,EAAE,QAA+B;QAC1F,uBAAM,IAAI,GAAG;YACX,OAAO,EAAE,OAAO;YAChB,UAAU,EAAE,UAAU;YACtB,KAAK,EAAE,QAAQ,CAAC,KAAK;YACrB,SAAS,EAAE,QAAQ,CAAC,SAAS;YAC7B,QAAQ,EAAE,QAAQ,CAAC,QAAQ;YAC3B,UAAU,EAAE,QAAQ,CAAC,UAAU;SAChC,CAAC;QAEF,uBAAM,OAAO,GAAG;YACd,OAAO,EAAE,IAAI,WAAW,EAAE,CAAC,GAAG,CAAC,cAAc,EAAE,kBAAkB,CAAC;SACnE,CAAC;QAEF,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,GAAG,EAAE,IAAI,EAAE,OAAO,CAAC,CAAA;KAC1C;;;YArBF,UAAU;;;;YALH,UAAU"
+}

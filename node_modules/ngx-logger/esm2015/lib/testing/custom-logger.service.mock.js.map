@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "custom-logger.service.mock.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/testing/custom-logger.service.mock.ts"
+  ],
+  "sourcesContent": [
+    "import {NGXLoggerMock} from './logger.service.mock';\n\n/**\n * CustomNGXLoggerServiceMock is a mock for CustomNGXLoggerService\n */\nexport class CustomNGXLoggerServiceMock {\n\n  constructor() {\n  }\n\n  create(): NGXLoggerMock {\n    // you can inject your own httpService or use the default,\n    return new NGXLoggerMock();\n  }\n}\n\n\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,OAAO,EAAC,aAAa,EAAC,MAAM,uBAAuB,CAAC;;;;AAKpD,MAAM;IAEJ;KACC;;;;IAED,MAAM;;QAEJ,MAAM,CAAC,IAAI,aAAa,EAAE,CAAC;KAC5B;CACF"
+}

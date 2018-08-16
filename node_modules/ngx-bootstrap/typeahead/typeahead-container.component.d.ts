@@ -30,7 +30,7 @@ export declare class TypeaheadContainerComponent {
     prevActiveMatch(): void;
     nextActiveMatch(): void;
     selectActive(value: TypeaheadMatch): void;
-    hightlight(match: TypeaheadMatch, query: any): string;
+    highlight(match: TypeaheadMatch, query: any): string;
     focusLost(): void;
     isActive(value: TypeaheadMatch): boolean;
     selectMatch(value: TypeaheadMatch, e?: Event): boolean;

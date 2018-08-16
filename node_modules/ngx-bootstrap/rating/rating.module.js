@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RatingComponent } from './rating.component';
-var RatingModule = (function () {
+var RatingModule = /** @class */ (function () {
     function RatingModule() {
     }
     RatingModule.forRoot = function () {
@@ -17,8 +17,6 @@ var RatingModule = (function () {
                     exports: [RatingComponent]
                 },] },
     ];
-    /** @nocollapse */
-    RatingModule.ctorParameters = function () { return []; };
     return RatingModule;
 }());
 export { RatingModule };

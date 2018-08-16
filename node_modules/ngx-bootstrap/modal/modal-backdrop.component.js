@@ -3,7 +3,7 @@ import { CLASS_NAME } from './modal-options.class';
 import { isBs3 } from '../utils/theme-provider';
 import { Utils } from '../utils/utils.class';
 /** This component will be added as background layout for modals if enabled */
-var ModalBackdropComponent = (function () {
+var ModalBackdropComponent = /** @class */ (function () {
     function ModalBackdropComponent(element, renderer) {
         this._isShown = false;
         this.element = element;

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-var BsCustomDatesViewComponent = (function () {
+var BsCustomDatesViewComponent = /** @class */ (function () {
     function BsCustomDatesViewComponent() {
     }
     BsCustomDatesViewComponent.decorators = [
@@ -10,10 +10,9 @@ var BsCustomDatesViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsCustomDatesViewComponent.ctorParameters = function () { return []; };
     BsCustomDatesViewComponent.propDecorators = {
-        'isCustomRangeShown': [{ type: Input },],
-        'ranges': [{ type: Input },],
+        "isCustomRangeShown": [{ type: Input },],
+        "ranges": [{ type: Input },],
     };
     return BsCustomDatesViewComponent;
 }());

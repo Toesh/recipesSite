@@ -2,7 +2,7 @@
  * @copyright Valor Software
  * @copyright Angular ng-bootstrap team
  */
-var ContentRef = (function () {
+var ContentRef = /** @class */ (function () {
     function ContentRef(nodes, viewRef, componentRef) {
         this.nodes = nodes;
         this.viewRef = viewRef;

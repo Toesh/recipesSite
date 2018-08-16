@@ -1,6 +1,6 @@
 import { BsCustomDates } from '../themes/bs/bs-custom-dates-view.component';
 import { BsDatepickerEffects } from '../reducer/bs-datepicker.effects';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { BsDatepickerViewMode, BsNavigationEvent, CalendarCellViewModel, CellHoverEvent, DatepickerRenderOptions, DaysCalendarViewModel, DayViewModel, MonthsCalendarViewModel, YearsCalendarViewModel } from '../models/index';
 export declare abstract class BsDatepickerAbstractComponent {
     containerClass: string;

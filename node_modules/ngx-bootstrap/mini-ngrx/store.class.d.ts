@@ -1,9 +1,7 @@
 /**
  * @copyright ngrx
  */
-import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
-import { Operator } from 'rxjs/Operator';
+import { Observable, Observer, Operator } from 'rxjs';
 import { Action, ActionReducer } from './index';
 export declare class MiniStore<T> extends Observable<T> implements Observer<Action> {
     private _dispatcher;

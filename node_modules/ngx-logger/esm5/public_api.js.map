@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "public_api.js",
+  "sources": [
+    "ng://ngx-logger/src/public_api.ts"
+  ],
+  "sourcesContent": [
+    "/*\n * Public API Surface of ngx-logger\n */\n\nexport * from './lib/logger.module';\nexport * from './lib/testing';\n"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;AAIA,mKAAc,qBAAqB,CAAC;AACpC,oFAAc,eAAe,CAAC"
+}

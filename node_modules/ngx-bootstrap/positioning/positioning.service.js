@@ -1,6 +1,6 @@
 import { Injectable, ElementRef } from '@angular/core';
 import { positionElements } from './ng-positioning';
-var PositioningService = (function () {
+var PositioningService = /** @class */ (function () {
     function PositioningService() {
     }
     PositioningService.prototype.position = function (options) {
@@ -10,8 +10,6 @@ var PositioningService = (function () {
     PositioningService.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    PositioningService.ctorParameters = function () { return []; };
     return PositioningService;
 }());
 export { PositioningService };

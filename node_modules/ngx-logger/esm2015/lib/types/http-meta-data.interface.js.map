@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "http-meta-data.interface.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/types/http-meta-data.interface.ts"
+  ],
+  "sourcesContent": [
+    "import {NgxLoggerLevel} from './logger-level.enum';\n\nexport class HttpMetaDataInterface {\n  level: NgxLoggerLevel;\n  timestamp: string;\n  fileName: string;\n  lineNumber: string;\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAEA,MAAM;CAKL"
+}

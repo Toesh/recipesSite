@@ -7,7 +7,7 @@ export var PAGINATION_CONTROL_VALUE_ACCESSOR = {
     useExisting: forwardRef(function () { return PaginationComponent; }),
     multi: true
 };
-var PaginationComponent = (function () {
+var PaginationComponent = /** @class */ (function () {
     function PaginationComponent(renderer, elementRef, paginationConfig, changeDetection) {
         this.renderer = renderer;
         this.elementRef = elementRef;
@@ -15,8 +15,8 @@ var PaginationComponent = (function () {
         /** fired when total pages count changes, $event:number equals to total pages count */
         this.numPages = new EventEmitter();
         /** fired when page was changed, $event:{page, itemsPerPage} equals to object
-         * with current page index and number of items per page
-         */
+           * with current page index and number of items per page
+           */
         this.pageChanged = new EventEmitter();
         this.onChange = Function.prototype;
         this.onTouched = Function.prototype;
@@ -29,8 +29,8 @@ var PaginationComponent = (function () {
         }
     }
     Object.defineProperty(PaginationComponent.prototype, "itemsPerPage", {
-        /** maximum number of items per page. If value less than 1 will display all items on one page */
-        get: function () {
+        get: /** maximum number of items per page. If value less than 1 will display all items on one page */
+        function () {
             return this._itemsPerPage;
         },
         set: function (v) {
@@ -41,8 +41,8 @@ var PaginationComponent = (function () {
         configurable: true
     });
     Object.defineProperty(PaginationComponent.prototype, "totalItems", {
-        /** total number of items in all pages */
-        get: function () {
+        get: /** total number of items in all pages */
+        function () {
             return this._totalItems;
         },
         set: function (v) {
@@ -152,7 +152,10 @@ var PaginationComponent = (function () {
         }
     };
     // Create page object used in template
-    PaginationComponent.prototype.makePage = function (num, text, active) {
+    // Create page object used in template
+    PaginationComponent.prototype.makePage = 
+    // Create page object used in template
+    function (num, text, active) {
         return { text: text, number: num, active: active };
     };
     PaginationComponent.prototype.getPages = function (currentPage, totalPages) {
@@ -200,7 +203,10 @@ var PaginationComponent = (function () {
         return pages;
     };
     // base class
-    PaginationComponent.prototype.calculateTotalPages = function () {
+    // base class
+    PaginationComponent.prototype.calculateTotalPages = 
+    // base class
+    function () {
         var totalPages = this.itemsPerPage < 1
             ? 1
             : Math.ceil(this.totalItems / this.itemsPerPage);
@@ -221,21 +227,21 @@ var PaginationComponent = (function () {
         { type: ChangeDetectorRef, },
     ]; };
     PaginationComponent.propDecorators = {
-        'align': [{ type: Input },],
-        'maxSize': [{ type: Input },],
-        'boundaryLinks': [{ type: Input },],
-        'directionLinks': [{ type: Input },],
-        'firstText': [{ type: Input },],
-        'previousText': [{ type: Input },],
-        'nextText': [{ type: Input },],
-        'lastText': [{ type: Input },],
-        'rotate': [{ type: Input },],
-        'pageBtnClass': [{ type: Input },],
-        'disabled': [{ type: Input },],
-        'numPages': [{ type: Output },],
-        'pageChanged': [{ type: Output },],
-        'itemsPerPage': [{ type: Input },],
-        'totalItems': [{ type: Input },],
+        "align": [{ type: Input },],
+        "maxSize": [{ type: Input },],
+        "boundaryLinks": [{ type: Input },],
+        "directionLinks": [{ type: Input },],
+        "firstText": [{ type: Input },],
+        "previousText": [{ type: Input },],
+        "nextText": [{ type: Input },],
+        "lastText": [{ type: Input },],
+        "rotate": [{ type: Input },],
+        "pageBtnClass": [{ type: Input },],
+        "disabled": [{ type: Input },],
+        "numPages": [{ type: Output },],
+        "pageChanged": [{ type: Output },],
+        "itemsPerPage": [{ type: Input },],
+        "totalItems": [{ type: Input },],
     };
     return PaginationComponent;
 }());

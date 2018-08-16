@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-var BsDatepickerDayDecoratorComponent = (function () {
+var BsDatepickerDayDecoratorComponent = /** @class */ (function () {
     function BsDatepickerDayDecoratorComponent() {
     }
     BsDatepickerDayDecoratorComponent.decorators = [
@@ -19,9 +19,8 @@ var BsDatepickerDayDecoratorComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsDatepickerDayDecoratorComponent.ctorParameters = function () { return []; };
     BsDatepickerDayDecoratorComponent.propDecorators = {
-        'day': [{ type: Input },],
+        "day": [{ type: Input },],
     };
     return BsDatepickerDayDecoratorComponent;
 }());

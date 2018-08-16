@@ -4,7 +4,7 @@ import { CollapseModule } from '../collapse/collapse.module';
 import { AccordionPanelComponent } from './accordion-group.component';
 import { AccordionComponent } from './accordion.component';
 import { AccordionConfig } from './accordion.config';
-var AccordionModule = (function () {
+var AccordionModule = /** @class */ (function () {
     function AccordionModule() {
     }
     AccordionModule.forRoot = function () {
@@ -17,8 +17,6 @@ var AccordionModule = (function () {
                     exports: [AccordionComponent, AccordionPanelComponent]
                 },] },
     ];
-    /** @nocollapse */
-    AccordionModule.ctorParameters = function () { return []; };
     return AccordionModule;
 }());
 export { AccordionModule };

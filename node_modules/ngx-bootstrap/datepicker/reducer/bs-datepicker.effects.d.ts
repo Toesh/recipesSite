@@ -1,6 +1,4 @@
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { BsDatepickerAbstractComponent } from '../base/bs-datepicker-container';
 import { BsDatepickerConfig } from '../bs-datepicker.config';
 import { BsDatepickerViewMode, DatepickerRenderOptions, DaysCalendarViewModel, MonthsCalendarViewModel, YearsCalendarViewModel } from '../models/index';

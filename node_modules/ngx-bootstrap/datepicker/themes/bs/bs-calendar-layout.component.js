@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-var BsCalendarLayoutComponent = (function () {
+var BsCalendarLayoutComponent = /** @class */ (function () {
     function BsCalendarLayoutComponent() {
     }
     BsCalendarLayoutComponent.decorators = [
@@ -8,8 +8,6 @@ var BsCalendarLayoutComponent = (function () {
                     template: "\n    <!-- current date, will be added in nearest releases -->\n    <bs-current-date title=\"hey there\" *ngIf=\"false\"></bs-current-date>\n\n    <!--navigation-->\n    <div class=\"bs-datepicker-head\">\n      <ng-content select=\"bs-datepicker-navigation-view\"></ng-content>\n    </div>\n\n    <div class=\"bs-datepicker-body\">\n      <ng-content></ng-content>\n    </div>\n\n    <!--timepicker-->\n    <bs-timepicker *ngIf=\"false\"></bs-timepicker>\n  "
                 },] },
     ];
-    /** @nocollapse */
-    BsCalendarLayoutComponent.ctorParameters = function () { return []; };
     return BsCalendarLayoutComponent;
 }());
 export { BsCalendarLayoutComponent };

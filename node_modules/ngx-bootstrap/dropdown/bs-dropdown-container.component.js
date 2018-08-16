@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Renderer2 } from '@angular/core';
 import { BsDropdownState } from './bs-dropdown.state';
 import { isBs3 } from '../utils/theme-provider';
-var BsDropdownContainerComponent = (function () {
+var BsDropdownContainerComponent = /** @class */ (function () {
     function BsDropdownContainerComponent(_state, cd, _renderer, _element) {
         var _this = this;
         this._state = _state;

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "http.service.mock.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/testing/http.service.mock.ts"
+  ],
+  "sourcesContent": [
+    "import {Observable, of} from 'rxjs';\n\nexport class NGXLoggerHttpServiceMock {\n  constructor() {\n\n  }\n\n  logOnServer(url: string, message: string, additional: any[], timestamp: string, logLevel: string): Observable<any> {\n    return of({})\n  }\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,OAAO,EAAa,EAAE,EAAC,MAAM,MAAM,CAAC;AAEpC,MAAM;IACJ;KAEC;;;;;;;;;IAED,WAAW,CAAC,GAAW,EAAE,OAAe,EAAE,UAAiB,EAAE,SAAiB,EAAE,QAAgB;QAC9F,MAAM,CAAC,EAAE,CAAC,EAAE,CAAC,CAAA;KACd;CACF"
+}

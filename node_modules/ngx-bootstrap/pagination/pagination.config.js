@@ -1,7 +1,6 @@
-// todo: split
 import { Injectable } from '@angular/core';
 /** Provides default values for Pagination and pager components */
-var PaginationConfig = (function () {
+var PaginationConfig = /** @class */ (function () {
     function PaginationConfig() {
         this.main = {
             maxSize: void 0,
@@ -26,8 +25,6 @@ var PaginationConfig = (function () {
     PaginationConfig.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    PaginationConfig.ctorParameters = function () { return []; };
     return PaginationConfig;
 }());
 export { PaginationConfig };

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "logger.module.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/logger.module.ts"
+  ],
+  "sourcesContent": [
+    "import {CommonModule} from '@angular/common';\nimport {HttpClientModule} from '@angular/common/http';\nimport {ModuleWithProviders, NgModule} from '@angular/core';\n\nimport {NGXLogger} from './logger.service';\nimport {LoggerConfig} from './logger.config';\nimport {CustomNGXLoggerService} from './custom-logger.service';\nimport {NGXLoggerHttpService} from './http.service';\n\nexport * from './logger.service';\n\nexport * from './logger.config';\n\nexport * from './custom-logger.service';\n\nexport * from './http.service';\n\nexport * from './utils/logger.utils';\nexport * from './types/logger-level.enum';\nexport * from './types/http-meta-data.interface';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    HttpClientModule\n  ],\n  providers: [\n    NGXLogger,\n    NGXLoggerHttpService,\n    CustomNGXLoggerService\n  ]\n})\nexport class LoggerModule {\n  static forRoot(config: LoggerConfig | null | undefined): ModuleWithProviders {\n    return {\n      ngModule: LoggerModule,\n      providers: [\n        {provide: LoggerConfig, useValue: config || {}},\n        NGXLogger,\n        NGXLoggerHttpService,\n        CustomNGXLoggerService\n      ]\n    };\n  }\n  static forChild(): ModuleWithProviders {\n    return {\n      ngModule: LoggerModule,\n      providers: [\n        NGXLogger,\n        NGXLoggerHttpService,\n        CustomNGXLoggerService\n      ]\n    };\n  }\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,OAAO,EAAC,YAAY,EAAC,MAAM,iBAAiB,CAAC;AAC7C,OAAO,EAAC,gBAAgB,EAAC,MAAM,sBAAsB,CAAC;AACtD,OAAO,EAAsB,QAAQ,EAAC,MAAM,eAAe,CAAC;AAE5D,OAAO,EAAC,SAAS,EAAC,MAAM,kBAAkB,CAAC;AAC3C,OAAO,EAAC,YAAY,EAAC,MAAM,iBAAiB,CAAC;AAC7C,OAAO,EAAC,sBAAsB,EAAC,MAAM,yBAAyB,CAAC;AAC/D,OAAO,EAAC,oBAAoB,EAAC,MAAM,gBAAgB,CAAC;AAEpD,kCAAc,kBAAkB,CAAC;AAEjC,6BAAc,iBAAiB,CAAC;AAEhC,uCAAc,yBAAyB,CAAC;AAExC,qCAAc,gBAAgB,CAAC;AAE/B,+BAAc,sBAAsB,CAAC;AACrC,+BAAc,2BAA2B,CAAC;AAC1C,sCAAc,kCAAkC,CAAC;AAajD,MAAM;;;;;IACJ,MAAM,CAAC,OAAO,CAAC,MAAuC;QACpD,MAAM,CAAC;YACL,QAAQ,EAAE,YAAY;YACtB,SAAS,EAAE;gBACT,EAAC,OAAO,EAAE,YAAY,EAAE,QAAQ,EAAE,MAAM,IAAI,EAAE,EAAC;gBAC/C,SAAS;gBACT,oBAAoB;gBACpB,sBAAsB;aACvB;SACF,CAAC;KACH;;;;IACD,MAAM,CAAC,QAAQ;QACb,MAAM,CAAC;YACL,QAAQ,EAAE,YAAY;YACtB,SAAS,EAAE;gBACT,SAAS;gBACT,oBAAoB;gBACpB,sBAAsB;aACvB;SACF,CAAC;KACH;;;YAhCF,QAAQ,SAAC;gBACR,OAAO,EAAE;oBACP,YAAY;oBACZ,gBAAgB;iBACjB;gBACD,SAAS,EAAE;oBACT,SAAS;oBACT,oBAAoB;oBACpB,sBAAsB;iBACvB;aACF"
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var BsDatepickerActions = (function () {
+var BsDatepickerActions = /** @class */ (function () {
     function BsDatepickerActions() {
     }
     BsDatepickerActions.prototype.calculate = function () {
@@ -42,7 +42,10 @@ var BsDatepickerActions = (function () {
         };
     };
     // date range picker
-    BsDatepickerActions.prototype.selectRange = function (value) {
+    // date range picker
+    BsDatepickerActions.prototype.selectRange = 
+    // date range picker
+    function (value) {
         return {
             type: BsDatepickerActions.SELECT_RANGE,
             payload: value
@@ -95,8 +98,6 @@ var BsDatepickerActions = (function () {
     BsDatepickerActions.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    BsDatepickerActions.ctorParameters = function () { return []; };
     return BsDatepickerActions;
 }());
 export { BsDatepickerActions };

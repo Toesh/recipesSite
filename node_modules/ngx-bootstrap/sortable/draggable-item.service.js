@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
-var DraggableItemService = (function () {
+import { Subject } from 'rxjs';
+var DraggableItemService = /** @class */ (function () {
     function DraggableItemService() {
         this.onCapture = new Subject();
     }
@@ -28,8 +28,6 @@ var DraggableItemService = (function () {
     DraggableItemService.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    DraggableItemService.ctorParameters = function () { return []; };
     return DraggableItemService;
 }());
 export { DraggableItemService };

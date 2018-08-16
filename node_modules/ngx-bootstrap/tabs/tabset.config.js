@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var TabsetConfig = (function () {
+var TabsetConfig = /** @class */ (function () {
     function TabsetConfig() {
         /** provides default navigation context class: 'tabs' or 'pills' */
         this.type = 'tabs';
@@ -7,8 +7,6 @@ var TabsetConfig = (function () {
     TabsetConfig.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    TabsetConfig.ctorParameters = function () { return []; };
     return TabsetConfig;
 }());
 export { TabsetConfig };

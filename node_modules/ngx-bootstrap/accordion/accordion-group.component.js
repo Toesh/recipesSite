@@ -7,7 +7,7 @@ import { AccordionComponent } from './accordion.component';
  * an `accordion-heading` attribute on `any` element inside of a group that
  * will be used as group's header template.
  */
-var AccordionPanelComponent = (function () {
+var AccordionPanelComponent = /** @class */ (function () {
     function AccordionPanelComponent(accordion) {
         /** Emits when the opened state changes */
         this.isOpenChange = new EventEmitter();
@@ -15,9 +15,10 @@ var AccordionPanelComponent = (function () {
         this.accordion = accordion;
     }
     Object.defineProperty(AccordionPanelComponent.prototype, "isOpen", {
+        get: 
         // Questionable, maybe .panel-open should be on child div.panel element?
         /** Is accordion group open or closed. This property supports two-way binding */
-        get: function () {
+        function () {
             return this._isOpen;
         },
         set: function (value) {
@@ -57,7 +58,7 @@ var AccordionPanelComponent = (function () {
     AccordionPanelComponent.decorators = [
         { type: Component, args: [{
                     selector: 'accordion-group, accordion-panel',
-                    template: "<div class=\"panel card\" [ngClass]=\"panelClass\"> <div class=\"panel-heading card-header\" role=\"tab\" (click)=\"toggleOpen($event)\"> <div class=\"panel-title\"> <div role=\"button\" class=\"accordion-toggle\" [attr.aria-expanded]=\"isOpen\"> <div *ngIf=\"heading\" [ngClass]=\"{'text-muted': isDisabled}\"> {{ heading }} </div> <ng-content select=\"[accordion-heading]\"></ng-content> </div> </div> </div> <div class=\"panel-collapse collapse\" role=\"tabpanel\" [collapse]=\"!isOpen\"> <div class=\"panel-body card-block card-body\"> <ng-content></ng-content> </div> </div> </div> ",
+                    template: "<div class=\"panel card\" [ngClass]=\"panelClass\"> <div class=\"panel-heading card-header\" role=\"tab\" (click)=\"toggleOpen($event)\"> <div class=\"panel-title\"> <div role=\"button\" class=\"accordion-toggle\" [attr.aria-expanded]=\"isOpen\"> <button class=\"btn btn-link\" *ngIf=\"heading\" [ngClass]=\"{'text-muted': isDisabled}\"> {{ heading }} </button> <ng-content select=\"[accordion-heading]\"></ng-content> </div> </div> </div> <div class=\"panel-collapse collapse\" role=\"tabpanel\" [collapse]=\"!isOpen\"> <div class=\"panel-body card-block card-body\"> <ng-content></ng-content> </div> </div> </div> ",
                     host: {
                         class: 'panel',
                         style: 'display: block'
@@ -69,11 +70,11 @@ var AccordionPanelComponent = (function () {
         { type: AccordionComponent, decorators: [{ type: Inject, args: [AccordionComponent,] },] },
     ]; };
     AccordionPanelComponent.propDecorators = {
-        'heading': [{ type: Input },],
-        'panelClass': [{ type: Input },],
-        'isDisabled': [{ type: Input },],
-        'isOpenChange': [{ type: Output },],
-        'isOpen': [{ type: HostBinding, args: ['class.panel-open',] }, { type: Input },],
+        "heading": [{ type: Input },],
+        "panelClass": [{ type: Input },],
+        "isDisabled": [{ type: Input },],
+        "isOpenChange": [{ type: Output },],
+        "isOpen": [{ type: HostBinding, args: ['class.panel-open',] }, { type: Input },],
     };
     return AccordionPanelComponent;
 }());

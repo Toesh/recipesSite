@@ -9,8 +9,12 @@
     "experimentalDecorators": true,
     "baseUrl": ".src",
     "paths": {
-      "@rest/*" : ["app/REST/*"],
-      "@assets/*" : ["assets/*"]
+      "@rest/*": [
+        "app/REST/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ]
     },
     "target": "es5",
     "typeRoots": [
@@ -19,6 +23,7 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015"
   }
 }

@@ -1,4 +1,4 @@
-var BsDatepickerAbstractComponent = (function () {
+var BsDatepickerAbstractComponent = /** @class */ (function () {
     function BsDatepickerAbstractComponent() {
         this._customRangesFish = [];
     }

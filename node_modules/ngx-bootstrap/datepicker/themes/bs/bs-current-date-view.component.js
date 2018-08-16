@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-var BsCurrentDateViewComponent = (function () {
+var BsCurrentDateViewComponent = /** @class */ (function () {
     function BsCurrentDateViewComponent() {
     }
     BsCurrentDateViewComponent.decorators = [
@@ -9,9 +9,8 @@ var BsCurrentDateViewComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    BsCurrentDateViewComponent.ctorParameters = function () { return []; };
     BsCurrentDateViewComponent.propDecorators = {
-        'title': [{ type: Input },],
+        "title": [{ type: Input },],
     };
     return BsCurrentDateViewComponent;
 }());

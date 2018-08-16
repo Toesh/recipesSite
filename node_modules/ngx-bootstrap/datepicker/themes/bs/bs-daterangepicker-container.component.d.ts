@@ -5,7 +5,7 @@ import { DayViewModel } from '../../models/index';
 import { BsDatepickerActions } from '../../reducer/bs-datepicker.actions';
 import { BsDatepickerEffects } from '../../reducer/bs-datepicker.effects';
 import { BsDatepickerStore } from '../../reducer/bs-datepicker.store';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 export declare class BsDaterangepickerContainerComponent extends BsDatepickerAbstractComponent implements OnInit, OnDestroy {
     private _config;
     private _store;

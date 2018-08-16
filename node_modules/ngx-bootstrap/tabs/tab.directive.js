@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, HostBinding, Input, Output, ElementRef, Renderer2 } from '@angular/core';
 import { TabsetComponent } from './tabset.component';
-var TabDirective = (function () {
+var TabDirective = /** @class */ (function () {
     function TabDirective(tabset, elementRef, renderer) {
         this.elementRef = elementRef;
         this.renderer = renderer;
@@ -15,8 +15,8 @@ var TabDirective = (function () {
         this.tabset.addTab(this);
     }
     Object.defineProperty(TabDirective.prototype, "customClass", {
-        /** if set, will be added to the tab's class attribute. Multiple classes are supported. */
-        get: function () {
+        get: /** if set, will be added to the tab's class attribute. Multiple classes are supported. */
+        function () {
             return this._customClass;
         },
         set: function (customClass) {
@@ -37,8 +37,8 @@ var TabDirective = (function () {
         configurable: true
     });
     Object.defineProperty(TabDirective.prototype, "active", {
-        /** tab active state toggle */
-        get: function () {
+        get: /** tab active state toggle */
+        function () {
             return this._active;
         },
         set: function (active) {
@@ -80,16 +80,16 @@ var TabDirective = (function () {
         { type: Renderer2, },
     ]; };
     TabDirective.propDecorators = {
-        'heading': [{ type: Input },],
-        'id': [{ type: HostBinding, args: ['attr.id',] }, { type: Input },],
-        'disabled': [{ type: Input },],
-        'removable': [{ type: Input },],
-        'customClass': [{ type: Input },],
-        'active': [{ type: HostBinding, args: ['class.active',] }, { type: Input },],
-        'select': [{ type: Output },],
-        'deselect': [{ type: Output },],
-        'removed': [{ type: Output },],
-        'addClass': [{ type: HostBinding, args: ['class.tab-pane',] },],
+        "heading": [{ type: Input },],
+        "id": [{ type: HostBinding, args: ['attr.id',] }, { type: Input },],
+        "disabled": [{ type: Input },],
+        "removable": [{ type: Input },],
+        "customClass": [{ type: Input },],
+        "active": [{ type: HostBinding, args: ['class.active',] }, { type: Input },],
+        "select": [{ type: Output },],
+        "deselect": [{ type: Output },],
+        "removed": [{ type: Output },],
+        "addClass": [{ type: HostBinding, args: ['class.tab-pane',] },],
     };
     return TabDirective;
 }());

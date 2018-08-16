@@ -1,4 +1,4 @@
-var BsComponentRef = (function () {
+var BsComponentRef = /** @class */ (function () {
     function BsComponentRef() {
     }
     return BsComponentRef;

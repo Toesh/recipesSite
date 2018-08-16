@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Input, Output, forwardRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, forwardRef, TemplateRef, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 export var RATING_CONTROL_VALUE_ACCESSOR = {
     provide: NG_VALUE_ACCESSOR,
@@ -6,7 +6,7 @@ export var RATING_CONTROL_VALUE_ACCESSOR = {
     useExisting: forwardRef(function () { return RatingComponent; }),
     multi: true
 };
-var RatingComponent = (function () {
+var RatingComponent = /** @class */ (function () {
     function RatingComponent(changeDetection) {
         this.changeDetection = changeDetection;
         /** number of icons */
@@ -36,7 +36,10 @@ var RatingComponent = (function () {
         this.range = this.buildTemplateObjects(this.max);
     };
     // model -> view
-    RatingComponent.prototype.writeValue = function (value) {
+    // model -> view
+    RatingComponent.prototype.writeValue = 
+    // model -> view
+    function (value) {
         if (value % 1 !== value) {
             this.value = Math.round(value);
             this.preValue = value;
@@ -94,13 +97,13 @@ var RatingComponent = (function () {
         { type: ChangeDetectorRef, },
     ]; };
     RatingComponent.propDecorators = {
-        'max': [{ type: Input },],
-        'readonly': [{ type: Input },],
-        'titles': [{ type: Input },],
-        'customTemplate': [{ type: Input },],
-        'onHover': [{ type: Output },],
-        'onLeave': [{ type: Output },],
-        'onKeydown': [{ type: HostListener, args: ['keydown', ['$event'],] },],
+        "max": [{ type: Input },],
+        "readonly": [{ type: Input },],
+        "titles": [{ type: Input },],
+        "customTemplate": [{ type: Input },],
+        "onHover": [{ type: Output },],
+        "onLeave": [{ type: Output },],
+        "onKeydown": [{ type: HostListener, args: ['keydown', ['$event'],] },],
     };
     return RatingComponent;
 }());

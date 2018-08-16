@@ -11,10 +11,10 @@ var __extends = (this && this.__extends) || (function () {
 import { Injectable } from '@angular/core';
 import { MiniStore } from '../../mini-ngrx/store.class';
 import { initialDatepickerState } from './bs-datepicker.state';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { MiniState } from '../../mini-ngrx/state.class';
 import { bsDatepickerReducer } from './bs-datepicker.reducer';
-var BsDatepickerStore = (function (_super) {
+var BsDatepickerStore = /** @class */ (function (_super) {
     __extends(BsDatepickerStore, _super);
     function BsDatepickerStore() {
         var _this = this;

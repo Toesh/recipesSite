@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "custom-logger.service.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/custom-logger.service.ts"
+  ],
+  "sourcesContent": [
+    "import {Inject, Injectable, PLATFORM_ID} from '@angular/core';\n\nimport {LoggerConfig} from './logger.config';\nimport {NGXLoggerHttpService} from './http.service';\nimport {NGXLogger} from './logger.service';\n\n\n/**\n * CustomNGXLoggerService is designed to allow users to get a new instance of a logger\n */\n@Injectable()\nexport class CustomNGXLoggerService {\n\n  constructor(private readonly httpService: NGXLoggerHttpService,\n              @Inject(PLATFORM_ID) private readonly platformId) {\n  }\n\n  create(config: LoggerConfig, httpService?: NGXLoggerHttpService): NGXLogger {\n    // you can inject your own httpService or use the default,\n    return new NGXLogger(httpService || this.httpService, config, this.platformId);\n  }\n}\n\n\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAAA,OAAO,EAAC,MAAM,EAAE,UAAU,EAAE,WAAW,EAAC,MAAM,eAAe,CAAC;AAG9D,OAAO,EAAC,oBAAoB,EAAC,MAAM,gBAAgB,CAAC;AACpD,OAAO,EAAC,SAAS,EAAC,MAAM,kBAAkB,CAAC;;;;AAO3C,MAAM;;;;;IAEJ,YAA6B,WAAiC,EACZ;QADrB,gBAAW,GAAX,WAAW,CAAsB;QACZ,eAAU,GAAV,UAAU;KAC3D;;;;;;IAED,MAAM,CAAC,MAAoB,EAAE,WAAkC;;QAE7D,MAAM,CAAC,IAAI,SAAS,CAAC,WAAW,IAAI,IAAI,CAAC,WAAW,EAAE,MAAM,EAAE,IAAI,CAAC,UAAU,CAAC,CAAC;KAChF;;;YAVF,UAAU;;;;YAPH,oBAAoB;4CAWb,MAAM,SAAC,WAAW"
+}

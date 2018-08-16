@@ -1,9 +1,8 @@
-import { Component, Input, Output, EventEmitter, forwardRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, forwardRef, TemplateRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { DraggableItemService } from './draggable-item.service';
 /* tslint:disable */
-/* tslint:enable */
-var SortableComponent = (function () {
+var SortableComponent = /** @class */ (function () {
     function SortableComponent(transfer) {
         var _this = this;
         /** class name for items wrapper */
@@ -25,8 +24,8 @@ var SortableComponent = (function () {
         /** placeholder item which will be shown if collection is empty */
         this.placeholderItem = '';
         /** fired on array change (reordering, insert, remove), same as <code>ngModelChange</code>.
-         *  Returns new items collection as a payload.
-         */
+           *  Returns new items collection as a payload.
+           */
         this.onChange = new EventEmitter();
         this.showPlaceholder = false;
         this.activeItem = -1;
@@ -117,11 +116,13 @@ var SortableComponent = (function () {
     SortableComponent.prototype.writeValue = function (value) {
         var _this = this;
         if (value) {
-            this.items = value.map(function (x, i) { return ({
-                id: i,
-                initData: x,
-                value: _this.fieldName ? x[_this.fieldName] : x
-            }); });
+            this.items = value.map(function (x, i) {
+                return ({
+                    id: i,
+                    initData: x,
+                    value: _this.fieldName ? x[_this.fieldName] : x
+                });
+            });
         }
         else {
             this.items = [];
@@ -137,7 +138,10 @@ var SortableComponent = (function () {
             : this.itemStyle;
     };
     // tslint:disable-next-line
-    SortableComponent.prototype.initDragstartEvent = function (event) {
+    // tslint:disable-next-line
+    SortableComponent.prototype.initDragstartEvent = 
+    // tslint:disable-next-line
+    function (event) {
         // it is necessary for mozilla
         // data type should be 'Text' instead of 'text/plain' to keep compatibility
         // with IE
@@ -148,7 +152,7 @@ var SortableComponent = (function () {
         { type: Component, args: [{
                     selector: 'bs-sortable',
                     exportAs: 'bs-sortable',
-                    template: "\n<div\n    [ngClass]=\"wrapperClass\"\n    [ngStyle]=\"wrapperStyle\"\n    [ngStyle]=\"wrapperStyle\"\n    (dragover)=\"cancelEvent($event)\"\n    (dragenter)=\"cancelEvent($event)\"\n    (drop)=\"resetActiveItem($event)\"\n    (mouseleave)=\"resetActiveItem($event)\">\n  <div\n        *ngIf=\"showPlaceholder\"\n        [ngClass]=\"placeholderClass\"\n        [ngStyle]=\"placeholderStyle\"\n        (dragover)=\"onItemDragover($event, 0)\"\n        (dragenter)=\"cancelEvent($event)\"\n    >{{placeholderItem}}</div>\n    <div\n        *ngFor=\"let item of items; let i=index;\"\n        [ngClass]=\"[ itemClass, i === activeItem ? itemActiveClass : '' ]\"\n        [ngStyle]=\"getItemStyle(i === activeItem)\"\n        draggable=\"true\"\n        (dragstart)=\"onItemDragstart($event, item, i)\"\n        (dragend)=\"resetActiveItem($event)\"\n        (dragover)=\"onItemDragover($event, i)\"\n        (dragenter)=\"cancelEvent($event)\"\n    ><ng-template [ngTemplateOutlet]=\"itemTemplate || defItemTemplate\"\n  [ngTemplateOutletContext]=\"{item:item, index: i}\"></ng-template></div>\n</div>\n\n<ng-template #defItemTemplate let-item=\"item\">{{item.value}}</ng-template>  \n",
+                    template: "\n<div\n    [ngClass]=\"wrapperClass\"\n    [ngStyle]=\"wrapperStyle\"\n    [ngStyle]=\"wrapperStyle\"\n    (dragover)=\"cancelEvent($event)\"\n    (dragenter)=\"cancelEvent($event)\"\n    (drop)=\"resetActiveItem($event)\"\n    (mouseleave)=\"resetActiveItem($event)\">\n  <div\n        *ngIf=\"showPlaceholder\"\n        [ngClass]=\"placeholderClass\"\n        [ngStyle]=\"placeholderStyle\"\n        (dragover)=\"onItemDragover($event, 0)\"\n        (dragenter)=\"cancelEvent($event)\"\n    >{{placeholderItem}}</div>\n    <div\n        *ngFor=\"let item of items; let i=index;\"\n        [ngClass]=\"[ itemClass, i === activeItem ? itemActiveClass : '' ]\"\n        [ngStyle]=\"getItemStyle(i === activeItem)\"\n        draggable=\"true\"\n        (dragstart)=\"onItemDragstart($event, item, i)\"\n        (dragend)=\"resetActiveItem($event)\"\n        (dragover)=\"onItemDragover($event, i)\"\n        (dragenter)=\"cancelEvent($event)\"\n        aria-dropeffect=\"move\"\n        [attr.aria-grabbed]=\"i === activeItem\"\n    ><ng-template [ngTemplateOutlet]=\"itemTemplate || defItemTemplate\"\n  [ngTemplateOutletContext]=\"{item:item, index: i}\"></ng-template></div>\n</div>\n\n<ng-template #defItemTemplate let-item=\"item\">{{item.value}}</ng-template>  \n",
                     providers: [
                         {
                             provide: NG_VALUE_ACCESSOR,
@@ -163,18 +167,18 @@ var SortableComponent = (function () {
         { type: DraggableItemService, },
     ]; };
     SortableComponent.propDecorators = {
-        'fieldName': [{ type: Input },],
-        'wrapperClass': [{ type: Input },],
-        'wrapperStyle': [{ type: Input },],
-        'itemClass': [{ type: Input },],
-        'itemStyle': [{ type: Input },],
-        'itemActiveClass': [{ type: Input },],
-        'itemActiveStyle': [{ type: Input },],
-        'placeholderClass': [{ type: Input },],
-        'placeholderStyle': [{ type: Input },],
-        'placeholderItem': [{ type: Input },],
-        'itemTemplate': [{ type: Input },],
-        'onChange': [{ type: Output },],
+        "fieldName": [{ type: Input },],
+        "wrapperClass": [{ type: Input },],
+        "wrapperStyle": [{ type: Input },],
+        "itemClass": [{ type: Input },],
+        "itemStyle": [{ type: Input },],
+        "itemActiveClass": [{ type: Input },],
+        "itemActiveStyle": [{ type: Input },],
+        "placeholderClass": [{ type: Input },],
+        "placeholderStyle": [{ type: Input },],
+        "placeholderItem": [{ type: Input },],
+        "itemTemplate": [{ type: Input },],
+        "onChange": [{ type: Output },],
     };
     return SortableComponent;
 }());

@@ -5,24 +5,22 @@ import { Injectable } from '@angular/core';
  * the values of its properties in order to provide default values for all the
  * popovers used in the application.
  */
-var PopoverConfig = (function () {
+var PopoverConfig = /** @class */ (function () {
     function PopoverConfig() {
         /**
-         * Placement of a popover. Accepts: "top", "bottom", "left", "right", "auto"
-         */
+           * Placement of a popover. Accepts: "top", "bottom", "left", "right", "auto"
+           */
         this.placement = 'top';
         /**
-         * Specifies events that should trigger. Supports a space separated list of
-         * event names.
-         */
+           * Specifies events that should trigger. Supports a space separated list of
+           * event names.
+           */
         this.triggers = 'click';
         this.outsideClick = false;
     }
     PopoverConfig.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    PopoverConfig.ctorParameters = function () { return []; };
     return PopoverConfig;
 }());
 export { PopoverConfig };

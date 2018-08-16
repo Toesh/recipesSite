@@ -1,6 +1,6 @@
 import { defaultMonthOptions } from './_defaults';
 import { BsDatepickerConfig } from '../bs-datepicker.config';
-var BsDatepickerState = (function () {
+var BsDatepickerState = /** @class */ (function () {
     function BsDatepickerState() {
     }
     return BsDatepickerState;

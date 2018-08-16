@@ -1,5 +1,5 @@
-import { Directive, Input, ViewContainerRef } from '@angular/core';
-var NgTranscludeDirective = (function () {
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+var NgTranscludeDirective = /** @class */ (function () {
     function NgTranscludeDirective(viewRef) {
         this.viewRef = viewRef;
     }
@@ -26,7 +26,7 @@ var NgTranscludeDirective = (function () {
         { type: ViewContainerRef, },
     ]; };
     NgTranscludeDirective.propDecorators = {
-        'ngTransclude': [{ type: Input },],
+        "ngTransclude": [{ type: Input },],
     };
     return NgTranscludeDirective;
 }());

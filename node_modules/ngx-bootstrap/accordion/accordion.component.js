@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AccordionConfig } from './accordion.config';
 /** Displays collapsible content panels for presenting information in a limited amount of space. */
-var AccordionComponent = (function () {
+var AccordionComponent = /** @class */ (function () {
     function AccordionComponent(config) {
         this.groups = [];
         Object.assign(this, config);
@@ -42,7 +42,7 @@ var AccordionComponent = (function () {
         { type: AccordionConfig, },
     ]; };
     AccordionComponent.propDecorators = {
-        'closeOthers': [{ type: Input },],
+        "closeOthers": [{ type: Input },],
     };
     return AccordionComponent;
 }());

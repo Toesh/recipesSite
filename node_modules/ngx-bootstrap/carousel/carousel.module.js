@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CarouselComponent } from './carousel.component';
 import { SlideComponent } from './slide.component';
 import { CarouselConfig } from './carousel.config';
-var CarouselModule = (function () {
+var CarouselModule = /** @class */ (function () {
     function CarouselModule() {
     }
     CarouselModule.forRoot = function () {
@@ -17,8 +17,6 @@ var CarouselModule = (function () {
                     providers: [CarouselConfig]
                 },] },
     ];
-    /** @nocollapse */
-    CarouselModule.ctorParameters = function () { return []; };
     return CarouselModule;
 }());
 export { CarouselModule };

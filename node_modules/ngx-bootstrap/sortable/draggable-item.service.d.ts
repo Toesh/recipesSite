@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { DraggableItem } from './draggable-item';
 export declare class DraggableItemService {
     private draggableItem;

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Config, ConfigService } from '@rest/config/config.service';
+import {Component, OnInit} from '@angular/core';
+import {Config, ConfigService} from '@rest/config/config.service';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class ConfigComponent implements OnInit {
 
   showConfigResponse() {
     this.configService.getConfigResponse()
-      // resp is of type `HttpResponse<Config>`
+    // resp is of type `HttpResponse<Config>`
       .subscribe(resp => {
         // display its headers
         const keys = resp.headers.keys();
@@ -34,12 +34,12 @@ export class ConfigComponent implements OnInit {
           `${key}: ${resp.headers.get(key)}`);
 
         // access the body directly, which is typed as `Config`.
-        this.config = { ...resp.body };
+        this.config = {...resp.body};
       });
   }
 
-  showConfig() {
-    this.configService.getConfig()
-      .subscribe(data => this.config = { ...data });
+  showConfig() { // TODO: fix for new version rxjs
+    // this.configService.getConfig()
+    //   .subscribe(data => this.config = {...data});
   }
 }

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "logger.config.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/logger.config.ts"
+  ],
+  "sourcesContent": [
+    "import {NgxLoggerLevel} from './types/logger-level.enum';\n\nexport class LoggerConfig {\n  level: NgxLoggerLevel;\n  serverLogLevel?: NgxLoggerLevel;\n  serverLoggingUrl?: string;\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AAEA,MAAM;CAIL"
+}

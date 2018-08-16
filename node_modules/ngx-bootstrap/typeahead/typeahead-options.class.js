@@ -1,4 +1,4 @@
-var TypeaheadOptions = (function () {
+var TypeaheadOptions = /** @class */ (function () {
     function TypeaheadOptions(options) {
         Object.assign(this, options);
     }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CollapseDirective } from './collapse.directive';
-var CollapseModule = (function () {
+var CollapseModule = /** @class */ (function () {
     function CollapseModule() {
     }
     CollapseModule.forRoot = function () {
@@ -12,8 +12,6 @@ var CollapseModule = (function () {
                     exports: [CollapseDirective]
                 },] },
     ];
-    /** @nocollapse */
-    CollapseModule.ctorParameters = function () { return []; };
     return CollapseModule;
 }());
 export { CollapseModule };

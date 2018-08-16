@@ -1,7 +1,7 @@
 import { Directive, TemplateRef } from '@angular/core';
 import { TabDirective } from './tab.directive';
 /** Should be used to mark <ng-template> element as a template for tab heading */
-var TabHeadingDirective = (function () {
+var TabHeadingDirective = /** @class */ (function () {
     function TabHeadingDirective(templateRef, tab) {
         tab.headingRef = templateRef;
     }

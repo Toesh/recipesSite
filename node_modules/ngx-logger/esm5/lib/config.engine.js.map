@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "config.engine.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/config.engine.ts"
+  ],
+  "sourcesContent": [
+    "import {LoggerConfig} from './logger.config';\n\nexport class NGXLoggerConfigEngine {\n\n  private _config;\n  constructor(readonly config: LoggerConfig) {\n    this._config = config;\n  }\n\n  updateConfig(config: LoggerConfig) {\n    this._config = config;\n  }\n\n  getConfig() {\n    return this._config;\n  }\n}"
+  ],
+  "names": [],
+  "mappings": ";;;;AAEA,MAAM;;;;IAGJ,YAAqB,MAAoB;QAApB,WAAM,GAAN,MAAM,CAAc;QACvC,IAAI,CAAC,OAAO,GAAG,MAAM,CAAC;KACvB;;;;;IAED,YAAY,CAAC,MAAoB;QAC/B,IAAI,CAAC,OAAO,GAAG,MAAM,CAAC;KACvB;;;;IAED,SAAS;QACP,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC;KACrB;CACF"
+}

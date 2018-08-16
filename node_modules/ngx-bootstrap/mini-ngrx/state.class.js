@@ -8,24 +8,19 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-/**
- * @copyright ngrx
- */
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { observeOn } from 'rxjs/operator/observeOn';
-import { queue } from 'rxjs/scheduler/queue';
-import { scan } from 'rxjs/operator/scan';
-var MiniState = (function (_super) {
+import { BehaviorSubject, queueScheduler } from 'rxjs';
+import { observeOn, scan } from 'rxjs/operators';
+var MiniState = /** @class */ (function (_super) {
     __extends(MiniState, _super);
     function MiniState(_initialState, actionsDispatcher$, reducer) {
         var _this = _super.call(this, _initialState) || this;
-        var actionInQueue$ = observeOn.call(actionsDispatcher$, queue);
-        var state$ = scan.call(actionInQueue$, function (state, action) {
+        var actionInQueue$ = actionsDispatcher$.pipe(observeOn(queueScheduler));
+        var state$ = actionInQueue$.pipe(scan(function (state, action) {
             if (!action) {
                 return state;
             }
             return reducer(state, action);
-        }, _initialState);
+        }, _initialState));
         state$.subscribe(function (value) { return _this.next(value); });
         return _this;
     }

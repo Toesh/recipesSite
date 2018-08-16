@@ -1,12 +1,15 @@
 import { window } from './facade/browser';
-var Utils = (function () {
+var Utils = /** @class */ (function () {
     function Utils() {
     }
     Utils.reflow = function (element) {
         (function (bs) { return bs; })(element.offsetHeight);
     };
     // source: https://github.com/jquery/jquery/blob/master/src/css/var/getStyles.js
-    Utils.getStyles = function (elem) {
+    // source: https://github.com/jquery/jquery/blob/master/src/css/var/getStyles.js
+    Utils.getStyles = 
+    // source: https://github.com/jquery/jquery/blob/master/src/css/var/getStyles.js
+    function (elem) {
         // Support: IE <=11 only, Firefox <=30 (#15098, #14150)
         // IE throws on elements created in popups
         // FF meanwhile throws on frame elements through "defaultView.getComputedStyle"

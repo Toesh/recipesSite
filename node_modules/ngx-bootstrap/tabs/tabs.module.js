@@ -5,7 +5,7 @@ import { TabHeadingDirective } from './tab-heading.directive';
 import { TabDirective } from './tab.directive';
 import { TabsetComponent } from './tabset.component';
 import { TabsetConfig } from './tabset.config';
-var TabsModule = (function () {
+var TabsModule = /** @class */ (function () {
     function TabsModule() {
     }
     TabsModule.forRoot = function () {
@@ -31,8 +31,6 @@ var TabsModule = (function () {
                     ]
                 },] },
     ];
-    /** @nocollapse */
-    TabsModule.ctorParameters = function () { return []; };
     return TabsModule;
 }());
 export { TabsModule };

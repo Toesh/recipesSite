@@ -7,7 +7,7 @@ export var PAGER_CONTROL_VALUE_ACCESSOR = {
     useExisting: forwardRef(function () { return PagerComponent; }),
     multi: true
 };
-var PagerComponent = (function () {
+var PagerComponent = /** @class */ (function () {
     function PagerComponent(renderer, elementRef, paginationConfig, changeDetection) {
         this.renderer = renderer;
         this.elementRef = elementRef;
@@ -15,8 +15,8 @@ var PagerComponent = (function () {
         /** fired when total pages count changes, $event:number equals to total pages count */
         this.numPages = new EventEmitter();
         /** fired when page was changed, $event:{page, itemsPerPage} equals to
-         * object with current page index and number of items per page
-         */
+           * object with current page index and number of items per page
+           */
         this.pageChanged = new EventEmitter();
         this.onChange = Function.prototype;
         this.onTouched = Function.prototype;
@@ -29,8 +29,8 @@ var PagerComponent = (function () {
         }
     }
     Object.defineProperty(PagerComponent.prototype, "itemsPerPage", {
-        /** maximum number of items per page. If value less than 1 will display all items on one page */
-        get: function () {
+        get: /** maximum number of items per page. If value less than 1 will display all items on one page */
+        function () {
             return this._itemsPerPage;
         },
         set: function (v) {
@@ -41,8 +41,8 @@ var PagerComponent = (function () {
         configurable: true
     });
     Object.defineProperty(PagerComponent.prototype, "totalItems", {
-        /** total number of items in all pages */
-        get: function () {
+        get: /** total number of items in all pages */
+        function () {
             return this._totalItems;
         },
         set: function (v) {
@@ -152,7 +152,10 @@ var PagerComponent = (function () {
         }
     };
     // Create page object used in template
-    PagerComponent.prototype.makePage = function (num, text, active) {
+    // Create page object used in template
+    PagerComponent.prototype.makePage = 
+    // Create page object used in template
+    function (num, text, active) {
         return { text: text, number: num, active: active };
     };
     PagerComponent.prototype.getPages = function (currentPage, totalPages) {
@@ -200,7 +203,10 @@ var PagerComponent = (function () {
         return pages;
     };
     // base class
-    PagerComponent.prototype.calculateTotalPages = function () {
+    // base class
+    PagerComponent.prototype.calculateTotalPages = 
+    // base class
+    function () {
         var totalPages = this.itemsPerPage < 1
             ? 1
             : Math.ceil(this.totalItems / this.itemsPerPage);
@@ -221,21 +227,21 @@ var PagerComponent = (function () {
         { type: ChangeDetectorRef, },
     ]; };
     PagerComponent.propDecorators = {
-        'align': [{ type: Input },],
-        'maxSize': [{ type: Input },],
-        'boundaryLinks': [{ type: Input },],
-        'directionLinks': [{ type: Input },],
-        'firstText': [{ type: Input },],
-        'previousText': [{ type: Input },],
-        'nextText': [{ type: Input },],
-        'lastText': [{ type: Input },],
-        'rotate': [{ type: Input },],
-        'pageBtnClass': [{ type: Input },],
-        'disabled': [{ type: Input },],
-        'numPages': [{ type: Output },],
-        'pageChanged': [{ type: Output },],
-        'itemsPerPage': [{ type: Input },],
-        'totalItems': [{ type: Input },],
+        "align": [{ type: Input },],
+        "maxSize": [{ type: Input },],
+        "boundaryLinks": [{ type: Input },],
+        "directionLinks": [{ type: Input },],
+        "firstText": [{ type: Input },],
+        "previousText": [{ type: Input },],
+        "nextText": [{ type: Input },],
+        "lastText": [{ type: Input },],
+        "rotate": [{ type: Input },],
+        "pageBtnClass": [{ type: Input },],
+        "disabled": [{ type: Input },],
+        "numPages": [{ type: Output },],
+        "pageChanged": [{ type: Output },],
+        "itemsPerPage": [{ type: Input },],
+        "totalItems": [{ type: Input },],
     };
     return PagerComponent;
 }());

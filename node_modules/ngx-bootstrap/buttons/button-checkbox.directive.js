@@ -1,4 +1,3 @@
-// tslint:disable:no-use-before-declare
 import { Directive, HostBinding, HostListener, Input, forwardRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 // TODO: config: activeClass - Class to apply to the checked buttons
@@ -10,7 +9,7 @@ export var CHECKBOX_CONTROL_VALUE_ACCESSOR = {
 /**
  * Add checkbox functionality to any element
  */
-var ButtonCheckboxDirective = (function () {
+var ButtonCheckboxDirective = /** @class */ (function () {
     function ButtonCheckboxDirective() {
         /** Truthy value, will be set to ngModel */
         this.btnCheckboxTrue = true;
@@ -21,7 +20,9 @@ var ButtonCheckboxDirective = (function () {
         this.onTouched = Function.prototype;
     }
     // view -> model
-    ButtonCheckboxDirective.prototype.onClick = function () {
+    ButtonCheckboxDirective.prototype.onClick = 
+    // view -> model
+    function () {
         if (this.isDisabled) {
             return;
         }
@@ -55,7 +56,12 @@ var ButtonCheckboxDirective = (function () {
     };
     // ControlValueAccessor
     // model -> view
-    ButtonCheckboxDirective.prototype.writeValue = function (value) {
+    // ControlValueAccessor
+    // model -> view
+    ButtonCheckboxDirective.prototype.writeValue = 
+    // ControlValueAccessor
+    // model -> view
+    function (value) {
         this.state = this.trueValue === value;
         this.value = value ? this.trueValue : this.falseValue;
     };
@@ -75,12 +81,11 @@ var ButtonCheckboxDirective = (function () {
                 },] },
     ];
     /** @nocollapse */
-    ButtonCheckboxDirective.ctorParameters = function () { return []; };
     ButtonCheckboxDirective.propDecorators = {
-        'btnCheckboxTrue': [{ type: Input },],
-        'btnCheckboxFalse': [{ type: Input },],
-        'state': [{ type: HostBinding, args: ['class.active',] },],
-        'onClick': [{ type: HostListener, args: ['click',] },],
+        "btnCheckboxTrue": [{ type: Input },],
+        "btnCheckboxFalse": [{ type: Input },],
+        "state": [{ type: HostBinding, args: ['class.active',] }, { type: HostBinding, args: ['attr.aria-pressed',] },],
+        "onClick": [{ type: HostListener, args: ['click',] },],
     };
     return ButtonCheckboxDirective;
 }());

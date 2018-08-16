@@ -10,22 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { AlertConfig } from './alert.config';
 import { OnChange } from '../utils/decorators';
-var AlertComponent = (function () {
+var AlertComponent = /** @class */ (function () {
     function AlertComponent(_config, changeDetection) {
         var _this = this;
         this.changeDetection = changeDetection;
         /** Alert type.
-         * Provides one of four bootstrap supported contextual classes:
-         * `success`, `info`, `warning` and `danger`
-         */
+           * Provides one of four bootstrap supported contextual classes:
+           * `success`, `info`, `warning` and `danger`
+           */
         this.type = 'warning';
         /** If set, displays an inline "Close" button */
         this.dismissible = false;
         /** Is alert visible */
         this.isOpen = true;
         /** This event fires immediately after close instance method is called,
-         * $event is an instance of Alert component.
-         */
+           * $event is an instance of Alert component.
+           */
         this.onClose = new EventEmitter();
         /** This event fires when alert closed, $event is an instance of Alert component */
         this.onClosed = new EventEmitter();
@@ -49,7 +49,18 @@ var AlertComponent = (function () {
     /**
      * Closes an alert by removing it from the DOM.
      */
-    AlertComponent.prototype.close = function () {
+    // todo: animation ` If the .fade and .in classes are present on the element,
+    // the alert will fade out before it is removed`
+    /**
+       * Closes an alert by removing it from the DOM.
+       */
+    AlertComponent.prototype.close = 
+    // todo: animation ` If the .fade and .in classes are present on the element,
+    // the alert will fade out before it is removed`
+    /**
+       * Closes an alert by removing it from the DOM.
+       */
+    function () {
         if (!this.isOpen) {
             return;
         }
@@ -71,12 +82,12 @@ var AlertComponent = (function () {
         { type: ChangeDetectorRef, },
     ]; };
     AlertComponent.propDecorators = {
-        'type': [{ type: Input },],
-        'dismissible': [{ type: Input },],
-        'dismissOnTimeout': [{ type: Input },],
-        'isOpen': [{ type: Input },],
-        'onClose': [{ type: Output },],
-        'onClosed': [{ type: Output },],
+        "type": [{ type: Input },],
+        "dismissible": [{ type: Input },],
+        "dismissOnTimeout": [{ type: Input },],
+        "isOpen": [{ type: Input },],
+        "onClose": [{ type: Output },],
+        "onClosed": [{ type: Output },],
     };
     __decorate([
         OnChange(),

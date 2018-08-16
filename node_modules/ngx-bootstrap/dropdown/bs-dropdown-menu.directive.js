@@ -1,6 +1,6 @@
 import { Directive, TemplateRef, ViewContainerRef } from '@angular/core';
 import { BsDropdownState } from './bs-dropdown.state';
-var BsDropdownMenuDirective = (function () {
+var BsDropdownMenuDirective = /** @class */ (function () {
     function BsDropdownMenuDirective(_state, _viewContainer, _templateRef) {
         _state.resolveDropdownMenu({
             templateRef: _templateRef,

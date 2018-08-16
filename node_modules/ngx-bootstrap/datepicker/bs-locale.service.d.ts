@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject, Observable } from 'rxjs';
 export declare class BsLocaleService {
     private _defaultLocale;
     private _locale;

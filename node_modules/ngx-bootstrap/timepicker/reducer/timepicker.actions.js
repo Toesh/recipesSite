@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-var TimepickerActions = (function () {
+var TimepickerActions = /** @class */ (function () {
     function TimepickerActions() {
     }
     TimepickerActions.prototype.writeValue = function (value) {
@@ -47,8 +47,6 @@ var TimepickerActions = (function () {
     TimepickerActions.decorators = [
         { type: Injectable },
     ];
-    /** @nocollapse */
-    TimepickerActions.ctorParameters = function () { return []; };
     return TimepickerActions;
 }());
 export { TimepickerActions };

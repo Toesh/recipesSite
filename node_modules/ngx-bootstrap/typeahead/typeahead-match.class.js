@@ -1,4 +1,4 @@
-var TypeaheadMatch = (function () {
+var TypeaheadMatch = /** @class */ (function () {
     function TypeaheadMatch(item, value, header) {
         if (value === void 0) { value = item; }
         if (header === void 0) { header = false; }

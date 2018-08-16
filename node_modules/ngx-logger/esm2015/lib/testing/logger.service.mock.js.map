@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "logger.service.mock.js",
+  "sources": [
+    "ng://ngx-logger/src/lib/testing/logger.service.mock.ts"
+  ],
+  "sourcesContent": [
+    "\nexport class NGXLoggerMock {\n\n  constructor() {\n  }\n\n  trace(message: any, ...additional: any[]) {\n  }\n\n  debug(message: any, ...additional: any[]) {\n  }\n\n  info(message: any, ...additional: any[]) {\n  }\n\n  log(message: any, ...additional: any[]) {\n  }\n\n  warn(message: any, ...additional: any[]) {\n  }\n\n  error(message: any, ...additional: any[]) {\n  }\n\n  updateConfig(config: any) {\n\n  }\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;;AACA,MAAM;IAEJ;KACC;;;;;;IAED,KAAK,CAAC,OAAY,EAAE,GAAG,UAAiB;KACvC;;;;;;IAED,KAAK,CAAC,OAAY,EAAE,GAAG,UAAiB;KACvC;;;;;;IAED,IAAI,CAAC,OAAY,EAAE,GAAG,UAAiB;KACtC;;;;;;IAED,GAAG,CAAC,OAAY,EAAE,GAAG,UAAiB;KACrC;;;;;;IAED,IAAI,CAAC,OAAY,EAAE,GAAG,UAAiB;KACtC;;;;;;IAED,KAAK,CAAC,OAAY,EAAE,GAAG,UAAiB;KACvC;;;;;IAED,YAAY,CAAC,MAAW;KAEvB;CACF"
+}
