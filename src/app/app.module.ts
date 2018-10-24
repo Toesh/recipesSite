@@ -10,6 +10,12 @@ import {ConfigComponent} from './components/config/config.component';
 import {MainMenuComponent} from './components/main-menu/main-menu.component';
 import {RecipeComponent} from './components/recipe/recipe.component';
 import {FormsModule} from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from './app.effects';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,10 @@ import {FormsModule} from '@angular/forms';
     // LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR }),
     AppRoutingModule,
     CollapseModule.forRoot(), AccordionModule.forRoot(),
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [
     ConfigService
