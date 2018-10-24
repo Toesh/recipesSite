@@ -4,17 +4,17 @@ import { ConfigComponent } from './components/config/config.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
 
 const routes: Routes = [
-  { path: 'config', component: ConfigComponent },
-  { path: 'home', component: RecipeComponent }
+	{ path: 'config', component: ConfigComponent },
+	{ path: 'home', component: RecipeComponent },
 ];
 
 @NgModule({
-  exports: [
-    RouterModule
-  ],
-  imports: [
-    RouterModule.forRoot(routes)
-  ]
+	exports: [
+		RouterModule,
+	],
+	imports: [
+		RouterModule.forRoot(routes),
+	],
 })
 
 export class AppRoutingModule {

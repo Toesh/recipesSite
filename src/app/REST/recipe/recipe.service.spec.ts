@@ -1,26 +1,26 @@
-import { TestBed, inject } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { NGXLogger, NGXLoggerHttpService, LoggerConfig } from 'ngx-logger';
+import { inject, TestBed } from '@angular/core/testing';
+import { LoggerConfig, NGXLogger, NGXLoggerHttpService } from 'ngx-logger';
 
-import { RecipeService } from './recipe.service';
 import { ConfigService } from '../config/config.service';
+import { RecipeService } from './recipe.service';
 
 describe('RecipeService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [
-        RecipeService,
-        HttpClient,
-        HttpHandler,
-        ConfigService,
-        NGXLogger,
-        NGXLoggerHttpService,
-        LoggerConfig
-      ]
-    });
-  });
+	beforeEach(() => {
+		TestBed.configureTestingModule({
+			providers: [
+				RecipeService,
+				HttpClient,
+				HttpHandler,
+				ConfigService,
+				NGXLogger,
+				NGXLoggerHttpService,
+				LoggerConfig,
+			],
+		});
+	});
 
-  it('should be created', inject([RecipeService], (service: RecipeService) => {
-    expect(service).toBeTruthy();
-  }));
+	it('should be created', inject([RecipeService], (service: RecipeService) => {
+		expect(service).toBeTruthy();
+	}));
 });

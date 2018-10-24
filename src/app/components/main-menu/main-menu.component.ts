@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-main-menu',
-  templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss'],
+	selector: 'app-main-menu',
+	templateUrl: './main-menu.component.html',
+	styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent implements OnInit {
-isCollapsed = true;
+	isCollapsed = true;
 
-  constructor() {
-  }
+	constructor() {
+		//
+	}
 
-  ngOnInit() {
-  }
-
+	ngOnInit() {
+		//
+	}
 }
