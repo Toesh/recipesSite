@@ -8,7 +8,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ConfigService } from '@rest/config/config.service';
 import { AccordionModule, CollapseModule } from 'ngx-bootstrap';
 import { environment } from '../environments/environment';
-// import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppEffects } from './app.effects';
@@ -27,8 +27,11 @@ import { metaReducers, reducers } from './reducers';
 	imports: [
 		BrowserModule,
 		HttpClientModule,
-		// TODO: Fix logger (2.4 > 3.0.5)
-		// LoggerModule.forRoot({ serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR }),
+		LoggerModule.forRoot({
+			serverLoggingUrl: '/api/logs',
+			level: NgxLoggerLevel.DEBUG,
+			serverLogLevel: NgxLoggerLevel.ERROR,
+		}),
 		AppRoutingModule,
 		CollapseModule.forRoot(), AccordionModule.forRoot(),
 		FormsModule,

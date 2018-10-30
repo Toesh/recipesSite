@@ -28,7 +28,7 @@
     "core-js": "^2.4.1",
     "fsevents": "^1.2.4",
     "ngx-bootstrap": "^3.0.1",
-    "ngx-logger": "^3.0.5",
+    "ngx-logger": "^3.3.3",
     "rxjs": "^6.2.2",
     "zone.js": "^0.8.26"
   },
