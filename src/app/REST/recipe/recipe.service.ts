@@ -10,8 +10,7 @@ export class RecipeService {
 	public recipeUrl = 'assets/recipe.json';
 
 	constructor(
-		private http: HttpClient,
-		private configService: ConfigService,
+		private http: HttpClient
 	) {
 		// this.recipeUrl = configService.getConfig(); //TODO: Get url from settings
 	}

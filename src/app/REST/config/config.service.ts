@@ -12,7 +12,7 @@ export class ConfigService {
 	public configUrl = 'assets/config.json';
 
 	constructor(
-		private http: HttpClient,
+		private http: HttpClient
 	) {
 	}
 
