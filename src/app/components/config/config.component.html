@@ -4,14 +4,14 @@
   <button (click)="clear(); showConfigResponse()">getResponse</button>
   <button (click)="clear()">clear</button>
   <span *ngIf="config">
-    <p>recipeUrl = "{{config.recipeUrl}}"</p>
+    <p>recipeUrl = "{{ config.recipeUrl }}"</p>
 
     <div *ngIf="headers">
       Response headers:
       <ul>
-        <li *ngFor="let header of headers">{{header}}</li>
+        <li *ngFor="let header of headers">{{ header }}</li>
       </ul>
     </div>
   </span>
 </div>
-<p *ngIf="error" class="error">{{error | json}}</p>
+<p *ngIf="error" class="error">{{ error | json }}</p>

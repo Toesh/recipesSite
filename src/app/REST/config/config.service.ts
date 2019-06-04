@@ -1,6 +1,5 @@
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NGXLogger } from 'ngx-logger';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
@@ -10,23 +9,24 @@ export interface Config {
 
 @Injectable()
 export class ConfigService {
-	configUrl = 'assets/config.json';
+	public configUrl = 'assets/config.json';
 
 	constructor(
 		private http: HttpClient,
-		private logger: NGXLogger,
 	) {
 	}
 
-	getConfig() {
+	public getConfig() {
+		const retries = 3;
+
 		return this.http.get<Config>(this.configUrl)
 			.pipe(
-				retry(3),
-				catchError(this.handleError),
+				retry(retries),
+				catchError(this.handleError)
 			);
 	}
 
-	getConfigResponse(): Observable<HttpResponse<Config>> {
+	public getConfigResponse(): Observable<HttpResponse<Config>> {
 		return this.http.get<Config>(
 			this.configUrl, { observe: 'response' });
 	}
@@ -35,10 +35,10 @@ export class ConfigService {
 		console.log(error);
 		if (error.error instanceof ErrorEvent) {
 			// Handle client-side or network error.
-			this.logger.error('An error occurred:', error.error.message);
+			console.error('An error occurred:', error.error.message);
 		} else {
 			// Handle unsuccessful response from backend.
-			this.logger.error(`Backend returned code ${error.status}, body was: ${error.error}`, error.error);
+			console.error(`Backend returned code ${error.status}, body was: ${error.error}`, error.error);
 		}
 
 		// return an ErrorObservable with a user-facing error message

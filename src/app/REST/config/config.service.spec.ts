@@ -1,20 +1,16 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { inject, TestBed } from '@angular/core/testing';
-import { LoggerConfig, NGXLogger, NGXLoggerHttpService } from 'ngx-logger';
-import { Config, ConfigService } from './config.service';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {inject, TestBed} from '@angular/core/testing';
+import {Config, ConfigService} from './config.service';
 
 describe('ConfigService', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			imports: [
-				HttpClientTestingModule,
+				HttpClientTestingModule
 			],
 			providers: [
-				ConfigService,
-				NGXLogger,
-				NGXLoggerHttpService,
-				LoggerConfig,
-			],
+				ConfigService
+			]
 		});
 	});
 
@@ -26,7 +22,7 @@ describe('ConfigService', () => {
 		const configService = TestBed.get(ConfigService);
 		const http = TestBed.get(HttpTestingController);
 		// fake response
-		const expectedConfig = [{ recipeUrl: 'http://localhost:8080/recipe' }];
+		const expectedConfig = [{recipeUrl: 'http://localhost:8080/recipe'}];
 
 		let actualConfig = [];
 		configService.getConfig().subscribe((config: Config[]) => actualConfig = config);

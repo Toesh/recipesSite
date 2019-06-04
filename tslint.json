@@ -99,12 +99,12 @@
 		"eofline": true,
 		"indent": [
 			true,
-			"spaces"
+			"tabs"
 		],
 		"no-output-on-prefix": true,
 		"no-input-rename": true,
 		"no-output-rename": true,
-		"max-inline-declarations": true,
+		"component-max-inline-declarations": true,
 		"max-line-length": [
 			true,
 			140
@@ -125,7 +125,7 @@
 			"check-separator",
 			"check-type"
 		],
-		"use-life-cycle-interface": true,
+		"use-lifecycle-interface": true,
 		"use-pipe-transform-interface": true,
 		// Style
 		"align": [
@@ -175,8 +175,8 @@
 			"always"
 		],
 		"space-before-function-paren": [true, "never"],
-		"use-host-property-decorator": true,
-		"use-input-property-decorator": true,
-		"use-output-property-decorator": true
+		"no-host-metadata-property": true,
+		"no-inputs-metadata-property": true,
+		"no-outputs-metadata-property": true
 	}
 }

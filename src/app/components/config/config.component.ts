@@ -4,27 +4,27 @@ import { Config, ConfigService } from '@rest/config/config.service';
 @Component({
 	selector: 'app-config',
 	templateUrl: './config.component.html',
-	styleUrls: ['./config.component.scss'],
+	styleUrls: ['./config.component.scss']
 })
 export class ConfigComponent implements OnInit {
-	error: any;
-	config: Config;
-	headers: string[];
+	public error: any;
+	public config: Config;
+	public headers: string[];
 
 	constructor(private configService: ConfigService) {
 	}
 
-	ngOnInit() {
+	public ngOnInit() {
 		//
 	}
 
-	clear() {
+	public clear() {
 		this.config = undefined;
 		this.error = undefined;
 		this.headers = undefined;
 	}
 
-	showConfigResponse() {
+	public showConfigResponse() {
 		this.configService.getConfigResponse()
 		// resp is of type `HttpResponse<Config>`
 			.subscribe((resp) => {
@@ -38,7 +38,7 @@ export class ConfigComponent implements OnInit {
 			});
 	}
 
-	showConfig() { // TODO: fix for new version rxjs
+	public showConfig() { // TODO: fix for new version rxjs
 		// this.configService.getConfig()
 		//   .subscribe(data => this.config = {...data});
 	}

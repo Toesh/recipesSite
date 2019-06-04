@@ -1,6 +1,5 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { inject, TestBed } from '@angular/core/testing';
-import { LoggerConfig, NGXLogger, NGXLoggerHttpService } from 'ngx-logger';
 
 import { ConfigService } from '../config/config.service';
 import { RecipeService } from './recipe.service';
@@ -12,11 +11,8 @@ describe('RecipeService', () => {
 				RecipeService,
 				HttpClient,
 				HttpHandler,
-				ConfigService,
-				NGXLogger,
-				NGXLoggerHttpService,
-				LoggerConfig,
-			],
+				ConfigService
+			]
 		});
 	});
 

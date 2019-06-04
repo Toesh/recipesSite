@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { provideMockActions } from '@ngrx/effects/testing';
-import { Observable } from 'rxjs';
+import {TestBed} from '@angular/core/testing';
+import {provideMockActions} from '@ngrx/effects/testing';
+import {Observable} from 'rxjs';
 
-import { AppEffects } from './app.effects';
+import {AppEffects} from './app.effects';
 
 describe('AppEffects', () => {
 	const actions$: Observable<any> = new Observable<any>();
@@ -12,8 +12,8 @@ describe('AppEffects', () => {
 		TestBed.configureTestingModule({
 			providers: [
 				AppEffects,
-				provideMockActions(() => actions$),
-			],
+				provideMockActions(() => actions$)
+			]
 		});
 
 		effects = TestBed.get(AppEffects);
