@@ -1,22 +1,17 @@
-import { HttpClient, HttpHandler } from '@angular/common/http';
-import { inject, TestBed } from '@angular/core/testing';
+import { HttpClient, HttpHandler } from "@angular/common/http";
+import { inject, TestBed } from "@angular/core/testing";
 
-import { ConfigService } from '../config/config.service';
-import { RecipeService } from './recipe.service';
+import { ConfigService } from "../config/config.service";
+import { RecipeService } from "./recipe.service";
 
-describe('RecipeService', () => {
+describe("RecipeService", () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			providers: [
-				RecipeService,
-				HttpClient,
-				HttpHandler,
-				ConfigService
-			]
+			providers: [RecipeService, HttpClient, HttpHandler, ConfigService]
 		});
 	});
 
-	it('should be created', inject([RecipeService], (service: RecipeService) => {
+	it("should be created", inject([RecipeService], (service: RecipeService) => {
 		expect(service).toBeTruthy();
 	}));
 });

@@ -1,25 +1,18 @@
-import {HttpClient, HttpHandler} from '@angular/common/http';
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { HttpClient, HttpHandler } from "@angular/common/http";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import {ConfigService} from '@rest/config/config.service';
-import {ConfigComponent} from './config.component';
+import { ConfigService } from "@rest/config/config.service";
+import { ConfigComponent } from "./config.component";
 
-describe('ConfigComponent', () => {
+describe("ConfigComponent", () => {
 	let component: ConfigComponent;
 	let fixture: ComponentFixture<ConfigComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [
-				ConfigComponent
-			],
-			providers: [
-				ConfigService,
-				HttpClient,
-				HttpHandler
-			]
-		})
-			.compileComponents();
+			declarations: [ConfigComponent],
+			providers: [ConfigService, HttpClient, HttpHandler]
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -28,7 +21,7 @@ describe('ConfigComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });

@@ -1,5 +1,5 @@
-declare var module: NodeModule;
+declare var module: INodeModule;
 
-interface NodeModule {
+interface INodeModule {
 	id: string;
 }

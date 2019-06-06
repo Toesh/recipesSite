@@ -1,10 +1,11 @@
-import { ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { environment } from '../../environments/environment';
+import { ActionReducerMap, MetaReducer } from "@ngrx/store";
+import { environment } from "../../environments/environment";
 
 /* tslint:disable: no-empty-interface */
-export interface State {
-}
+export interface IState {}
 
-export const reducers: ActionReducerMap<State> = {};
+export const reducers: ActionReducerMap<IState> = {};
 
-export const metaReducers: Array<MetaReducer<State>> = !environment.production ? [] : [];
+export const metaReducers: Array<MetaReducer<IState>> = !environment.production
+	? []
+	: [];
