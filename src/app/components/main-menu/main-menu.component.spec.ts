@@ -9,7 +9,9 @@ describe("MainMenuComponent", () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [MainMenuComponent]
-		}).compileComponents();
+		})
+			.compileComponents()
+			.catch(err => console.log(err));
 	}));
 
 	beforeEach(() => {

@@ -45,13 +45,13 @@
 		"no-empty": true,
 		"no-eval": true,
 		"no-floating-promises": true,
-		"no-implicit-dependencies": false,
+		"no-implicit-dependencies": false, // Overwrite tslint:latest
 		"no-misused-new": true,
 		"no-shadowed-variable": true,
 		"no-sparse-arrays": true,
 		"no-string-literal": false,
 		"no-string-throw": true,
-		"no-submodule-imports": false,
+		"no-submodule-imports": false, // Overwrite tslint:latest
 		"no-switch-case-fall-through": true,
 		"no-unused-expression": true,
 		"no-unused-variable": true,

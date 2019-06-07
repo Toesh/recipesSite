@@ -12,7 +12,9 @@ describe("ConfigComponent", () => {
 		TestBed.configureTestingModule({
 			declarations: [ConfigComponent],
 			providers: [ConfigService, HttpClient, HttpHandler]
-		}).compileComponents();
+		})
+			.compileComponents()
+			.catch(err => console.log(err));
 	}));
 
 	beforeEach(() => {

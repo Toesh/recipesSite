@@ -11,7 +11,9 @@ describe("AppComponent", () => {
 			declarations: [AppComponent, ConfigComponent],
 			imports: [HttpClientModule, RouterTestingModule],
 			providers: [ConfigService]
-		}).compileComponents();
+		})
+			.compileComponents()
+			.catch(err => console.log(err));
 	}));
 	it("should create the app", async(() => {
 		const fixture = TestBed.createComponent(AppComponent);

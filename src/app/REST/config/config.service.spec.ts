@@ -3,7 +3,7 @@ import {
 	HttpTestingController
 } from "@angular/common/http/testing";
 import { inject, TestBed } from "@angular/core/testing";
-import { IConfig, ConfigService } from "./config.service";
+import { ConfigService, IConfig } from "./config.service";
 
 describe("ConfigService", () => {
 	beforeEach(() => {
