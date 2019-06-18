@@ -1,0 +1,37 @@
+{
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"parser": "typescript",
+	"printWidth": 80,
+	"semi": true,
+	"singleQuote": false,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "html"
+			}
+		},
+		{
+			"files": "*.component.html",
+			"options": {
+				"parser": "angular"
+			}
+		},
+		{
+			"files": ["*.scss", "*.component.scss"],
+			"options": {
+				"parser": "scss"
+			}
+		},
+		{
+			"files": "*.json",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
+}
