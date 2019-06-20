@@ -5,7 +5,7 @@ import { RecipeComponent } from "./components/recipe/recipe.component";
 
 const routes: Routes = [
 	{ path: "config", component: ConfigComponent },
-	{ path: "home", component: RecipeComponent }
+	{ path: "", component: RecipeComponent }
 ];
 
 @NgModule({

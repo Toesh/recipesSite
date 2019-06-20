@@ -1,8 +1,10 @@
 <h3>Get configuration from JSON file</h3>
 <div>
-	<button (click)="showConfig()">get</button>
-	<button (click)="clear(); showConfigResponse()">getResponse</button>
-	<button (click)="clear()">clear</button>
+	<button mat-raised-button color="primary" (click)="showConfig()">get</button>
+	<button mat-raised-button (click)="clear(); showConfigResponse()">
+		getResponse
+	</button>
+	<button mat-raised-button (click)="clear()">clear</button>
 	<span *ngIf="config">
 		<p>recipeUrl = "{{ config.recipeUrl }}"</p>
 

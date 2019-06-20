@@ -1,12 +1,17 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { MatButtonModule } from "@angular/material";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
 import { ConfigService } from "@rest/config/config.service";
-import { AccordionModule, CollapseModule } from "ngx-bootstrap";
+
 import { environment } from "../environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -27,12 +32,13 @@ import { metaReducers, reducers } from "./reducers";
 		BrowserModule,
 		HttpClientModule,
 		AppRoutingModule,
-		CollapseModule.forRoot(),
-		AccordionModule.forRoot(),
 		FormsModule,
 		StoreModule.forRoot(reducers, { metaReducers }),
 		!environment.production ? StoreDevtoolsModule.instrument() : [],
-		EffectsModule.forRoot([AppEffects])
+		EffectsModule.forRoot([AppEffects]),
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatExpansionModule
 	],
 	providers: [ConfigService],
 	bootstrap: [AppComponent]
