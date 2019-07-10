@@ -7,25 +7,16 @@
 		"experimentalDecorators": true,
 		"importHelpers": true,
 		"incremental": true,
-		"lib": [
-			"es2017",
-			"dom"
-		],
+		"lib": ["es2017", "dom"],
 		"module": "esnext",
 		"moduleResolution": "node",
 		"outDir": "./dist/out-tsc",
 		"paths": {
-			"@rest/*": [
-				"app/REST/*"
-			],
-			"@assets/*": [
-				"assets/*"
-			]
+			"@rest/*": ["app/REST/*"],
+			"@assets/*": ["assets/*"]
 		},
 		"sourceMap": true,
 		"target": "es2015",
-		"typeRoots": [
-			"node_modules/@types"
-		]
+		"typeRoots": ["node_modules/@types"]
 	}
 }
