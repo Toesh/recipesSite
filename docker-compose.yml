@@ -1,0 +1,18 @@
+version: "3"
+services:
+    angular:
+        build: frontend
+        ports:
+            - "4200:4200"
+        volumes:
+            - ./frontend:/usr/src/app
+    express:
+        build: backend
+        ports:
+            - "3000:3000"
+        links:
+            - database
+    database:
+        image: mongo:4.1.13
+        ports:
+            - "27017:27017"

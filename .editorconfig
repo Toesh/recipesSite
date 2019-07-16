@@ -9,30 +9,8 @@ indent_style=tab
 indent_size=4
 trim_trailing_whitespace = true
 
-[{.eslintrc,.babelrc,.stylelintrc,jest.config,*.json,*.jsb3,*.jsb2,*.bowerrc}]
-indent_style=tab
-indent_size=4
-
-[{jshint.json,*.jshintrc}]
-indent_style=tab
-indent_size=4
-
-[*.scss]
-indent_style=tab
-indent_size=4
-
-[*.coffee]
-indent_style=tab
-indent_size=4
-
-[{.analysis_options,*.yml,*.yaml}]
-indent_style=space
-indent_size=2
-
-[tslint.json]
-indent_style=tab
-indent_size=4
-
 [*.md]
 max_line_length = off
-trim_trailing_whitespace = true
+
+[*.yml]
+indent_style=space

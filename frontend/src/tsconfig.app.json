@@ -1,0 +1,19 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../out-tsc/app",
+		"baseUrl": ".",
+		"paths": {
+			"@assets/*": ["assets/*"],
+			"@styles/*": ["app/styles/*"],
+			"@components/*": ["app/components/*"],
+			"@interfaces/*": ["app/interfaces/*"],
+			"@models/*": ["styles/models/*"],
+			"@pages/*": ["app/pages/*"],
+			"@reducers/*": ["app/reducers/*"],
+			"@services/*": ["app/services/*"]
+		},
+		"types": []
+	},
+	"exclude": ["test.ts", "**/*.spec.ts"]
+}
