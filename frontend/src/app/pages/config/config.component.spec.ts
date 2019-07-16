@@ -1,7 +1,6 @@
 import { HttpClient, HttpHandler } from "@angular/common/http";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ConfigService } from "@rest/config/config.service";
 import { ConfigComponent } from "./config.component";
 
 describe("ConfigComponent", () => {
@@ -11,7 +10,7 @@ describe("ConfigComponent", () => {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [ConfigComponent],
-			providers: [ConfigService, HttpClient, HttpHandler]
+			providers: [HttpClient, HttpHandler]
 		})
 			.compileComponents()
 			.catch(err => console.log(err));

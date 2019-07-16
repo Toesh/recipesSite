@@ -4,8 +4,14 @@
 		"outDir": "../out-tsc/app",
 		"baseUrl": ".",
 		"paths": {
-			"@rest/*": ["app/REST/*"],
-			"@assets/*": ["assets/*"]
+			"@assets/*": ["assets/*"],
+			"@styles/*": ["app/styles/*"],
+			"@components/*": ["app/components/*"],
+			"@interfaces/*": ["app/interfaces/*"],
+			"@models/*": ["styles/models/*"],
+			"@pages/*": ["app/pages/*"],
+			"@reducers/*": ["app/reducers/*"],
+			"@services/*": ["app/services/*"]
 		},
 		"types": []
 	},

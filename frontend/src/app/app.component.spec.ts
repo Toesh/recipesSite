@@ -1,7 +1,6 @@
 import { HttpClientModule } from "@angular/common/http";
 import { async, TestBed } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
-import { ConfigService } from "@rest/config/config.service";
 import { AppComponent } from "./app.component";
 import { ConfigComponent } from "./components/config/config.component";
 
@@ -10,7 +9,7 @@ describe("AppComponent", () => {
 		TestBed.configureTestingModule({
 			declarations: [AppComponent, ConfigComponent],
 			imports: [HttpClientModule, RouterTestingModule],
-			providers: [ConfigService]
+			providers: []
 		})
 			.compileComponents()
 			.catch(err => console.log(err));

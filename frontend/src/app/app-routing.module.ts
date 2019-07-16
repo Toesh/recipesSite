@@ -1,11 +1,14 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { ConfigComponent } from "./components/config/config.component";
-import { RecipeComponent } from "./components/recipe/recipe.component";
+
+import { AddRecipeComponent } from "@pages/add-recipe/add-recipe.component";
+import { ConfigComponent } from "@pages/config/config.component";
+import { OverviewComponent } from "@pages/overview/overview.component";
 
 const routes: Routes = [
 	{ path: "config", component: ConfigComponent },
-	{ path: "", component: RecipeComponent }
+	{ path: "add", component: AddRecipeComponent },
+	{ path: "", component: OverviewComponent }
 ];
 
 @NgModule({

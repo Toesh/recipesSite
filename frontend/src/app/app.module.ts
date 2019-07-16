@@ -1,7 +1,18 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { MatButtonModule } from "@angular/material";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {
+	MatButtonModule,
+	MatCardModule,
+	MatChipsModule,
+	MatDatepickerModule,
+	MatDividerModule,
+	MatIconModule,
+	MatInputModule,
+	MatRadioModule,
+	MatSelectModule,
+	MatTableModule
+} from "@angular/material";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -10,15 +21,19 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
-import { ConfigService } from "@rest/config/config.service";
+import { MainMenuComponent } from "@components/main-menu/main-menu.component";
+import { RecipeComponent } from "@components/recipe/recipe.component";
+
+import { AddRecipeComponent } from "@pages/add-recipe/add-recipe.component";
+import { ConfigComponent } from "@pages/config/config.component";
+import { OverviewComponent } from "@pages/overview/overview.component";
+
+import { ApiService } from "@services/api.service";
 
 import { environment } from "../environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AppEffects } from "./app.effects";
-import { ConfigComponent } from "./components/config/config.component";
-import { MainMenuComponent } from "./components/main-menu/main-menu.component";
-import { RecipeComponent } from "./components/recipe/recipe.component";
 import { metaReducers, reducers } from "./reducers";
 
 @NgModule({
@@ -26,7 +41,9 @@ import { metaReducers, reducers } from "./reducers";
 		AppComponent,
 		ConfigComponent,
 		RecipeComponent,
-		MainMenuComponent
+		MainMenuComponent,
+		AddRecipeComponent,
+		OverviewComponent
 	],
 	imports: [
 		BrowserModule,
@@ -38,9 +55,19 @@ import { metaReducers, reducers } from "./reducers";
 		EffectsModule.forRoot([AppEffects]),
 		BrowserAnimationsModule,
 		MatButtonModule,
-		MatExpansionModule
+		MatExpansionModule,
+		ReactiveFormsModule,
+		MatCardModule,
+		MatInputModule,
+		MatSelectModule,
+		MatChipsModule,
+		MatDatepickerModule,
+		MatRadioModule,
+		MatDividerModule,
+		MatIconModule,
+		MatTableModule
 	],
-	providers: [ConfigService],
+	providers: [ApiService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}
