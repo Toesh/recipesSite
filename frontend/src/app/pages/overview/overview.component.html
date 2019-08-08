@@ -3,10 +3,7 @@
 	<mat-divider></mat-divider>
 </div>
 
-<p *ngIf="recipeData.length <= 0" class="no-data">
-	There is no student added yet!
-</p>
-<div class="container" *ngIf="recipeData.length > 0">
+<div class="container">
 	<div class="mat-elevation-z8">
 		<table mat-table [dataSource]="dataSource">
 			<ng-container matColumnDef="_id">
@@ -22,3 +19,5 @@
 		</table>
 	</div>
 </div>
+
+<app-add-recipe-fab></app-add-recipe-fab>

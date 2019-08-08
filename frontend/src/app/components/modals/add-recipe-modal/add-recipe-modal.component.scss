@@ -1,0 +1,55 @@
+.controlers-wrapper {
+	display: grid;
+	grid-column-gap: 2rem;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"recipe_name recipe_name"
+		"description description"
+		"preparation_time cooking_time"
+		"difficulty ranking"
+		"steps steps"
+		"alternatives alternatives"
+		"link link"
+		"tags tags";
+}
+
+#alternatives {
+	grid-area: alternatives;
+}
+
+#cooking_time {
+	grid-area: cooking_time;
+}
+
+#description {
+	grid-area: description;
+}
+
+#difficulty {
+	grid-area: difficulty;
+}
+
+#link {
+	grid-area: link;
+}
+
+#preparation_time {
+	grid-area: preparation_time;
+}
+
+#ranking {
+	grid-area: ranking;
+}
+
+#recipe_name {
+	grid-area: recipe_name;
+}
+
+#steps {
+	grid-area: steps;
+}
+
+#tags {
+	grid-area: tags;
+}

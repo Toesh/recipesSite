@@ -1,0 +1,79 @@
+<h1 mat-dialog-title>Add Recipe</h1>
+<div mat-dialog-content>
+	<form [formGroup]="recipeForm" (ngSubmit)="submitRecipeForm()">
+		<div class="controlers-wrapper">
+			<mat-form-field class="controller" id="recipe_name">
+				<input
+					matInput
+					placeholder="Recipe name"
+					formControlName="recipe_name"
+				/>
+				<mat-error *ngIf="recipeForm.controls.recipe_name.invalid">
+					You must provide a <strong>recipe name</strong>
+				</mat-error>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="description">
+				<textarea
+					matInput
+					placeholder="Description"
+					formControlName="description"
+				></textarea>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="preparation_time">
+				<input
+					matInput
+					placeholder="Preparation time"
+					formControlName="preparation_time"
+				/>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="cooking_time">
+				<input
+					matInput
+					placeholder="Cooking time"
+					formControlName="cooking_time"
+				/>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="difficulty">
+				<mat-select placeholder="Select" formControlName="difficulty">
+					<mat-option value="option">Option</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="ranking">
+				<input matInput placeholder="Ranking" formControlName="ranking" />
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="steps">
+				<textarea
+					matInput
+					placeholder="Steps"
+					formControlName="steps"
+				></textarea>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="alternatives">
+				<textarea
+					matInput
+					placeholder="Alternatives"
+					formControlName="alternatives"
+				></textarea>
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="link">
+				<input matInput placeholder="Link" formControlName="link" />
+			</mat-form-field>
+
+			<mat-form-field class="controller" id="tags">
+				<input matInput placeholder="Tags" formControlName="tags" />
+			</mat-form-field>
+		</div>
+	</form>
+</div>
+<div mat-dialog-actions>
+	<button mat-flat-button (click)="onCancelClick()">Cancel</button>
+	<button mat-raised-button color="primary">Add</button>
+</div>
