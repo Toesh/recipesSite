@@ -21,10 +21,12 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
+import { AddRecipeFabComponent } from "@components/buttons/add-recipe-fab/add-recipe-fab.component";
+import { TagFieldComponent } from "@components/form-fields/tag-field/tag-field.component";
 import { MainMenuComponent } from "@components/main-menu/main-menu.component";
+import { AddRecipeModalComponent } from "@components/modals/add-recipe-modal/add-recipe-modal.component";
 import { RecipeComponent } from "@components/recipe/recipe.component";
 
-import { AddRecipeComponent } from "@pages/add-recipe/add-recipe.component";
 import { ConfigComponent } from "@pages/config/config.component";
 import { OverviewComponent } from "@pages/overview/overview.component";
 
@@ -42,9 +44,12 @@ import { metaReducers, reducers } from "./reducers";
 		ConfigComponent,
 		RecipeComponent,
 		MainMenuComponent,
-		AddRecipeComponent,
-		OverviewComponent
+		AddRecipeFabComponent,
+		OverviewComponent,
+		AddRecipeModalComponent,
+		TagFieldComponent
 	],
+	entryComponents: [AddRecipeModalComponent],
 	imports: [
 		BrowserModule,
 		HttpClientModule,
