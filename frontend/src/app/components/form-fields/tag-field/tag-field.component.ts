@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NgControl } from "@angular/forms";
-import { MatFormFieldControl } from "@angular/material";
+import { MatFormFieldControl } from "@angular/material/form-field";
 import { Observable } from "rxjs";
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { MatTableDataSource } from "@angular/material";
+import { MatTableDataSource } from "@angular/material/table";
 import { IRecipe } from "@interfaces/recipe.interface";
 import { ApiService } from "@services/api.service";
 

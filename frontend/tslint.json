@@ -54,8 +54,6 @@
 		"no-submodule-imports": false, // Overwrite tslint:latest
 		"no-switch-case-fall-through": true,
 		"no-unused-expression": true,
-		"no-unused-variable": true,
-		"no-use-before-declare": true,
 		"no-var-keyword": true,
 		"radix": true,
 		"restrict-plus-operands": true,
@@ -76,12 +74,6 @@
 		"use-lifecycle-interface": true,
 		"use-pipe-transform-interface": true,
 		// Style
-		"angular-whitespace": [
-			true,
-			"check-interpolation",
-			"check-pipe",
-			"check-semicolon"
-		],
 		"arrow-return-shorthand": true,
 		"callable-types": true,
 		"class-name": true,

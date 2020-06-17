@@ -13,7 +13,7 @@ describe("AppEffects", () => {
 			providers: [AppEffects, provideMockActions(() => actions$)]
 		});
 
-		effects = TestBed.get(AppEffects);
+		effects = TestBed.inject(AppEffects);
 	});
 
 	it("should be created", () => {
